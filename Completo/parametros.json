@@ -1,0 +1,157 @@
+{
+    "niveles": [
+        "1",
+        "2"
+    ],
+    "cursos": [
+        "A",
+        "B"
+    ],
+    "dias_semana": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes"
+    ],
+    "modulos_juntos": [
+        [1,2],
+        [3,4],
+        [5,6],
+        [7,8]
+    ],
+    "cantidad_modulos_por_dia_por_curso": {
+        "1": {
+            "Lunes": 6,
+            "Martes": 6,
+            "Miércoles": 8,
+            "Jueves": 6,
+            "Viernes": 6
+        },
+        "2": {
+            "Lunes": 6,
+            "Martes": 6,
+            "Miércoles": 8,
+            "Jueves": 6,
+            "Viernes": 6
+        }
+    },
+    "clases_por_nivel": {
+        "1": {
+            "Lenguaje": 8,
+            "Matemáticas": 6,
+            "Historia": 3,
+            "Artes Visuales": 2,
+            "Música": 2,
+            "Educación Física": 4,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Ciencias Naturales": 3
+        },
+        "2": {
+            "Lenguaje": 8,
+            "Matemáticas": 6,
+            "Historia": 3,
+            "Artes Visuales": 2,
+            "Música": 2,
+            "Educación Física": 4,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Ciencias Naturales": 3
+        }
+    },
+    "jefaturas": {
+        "1": {
+            "A": "Profesor Jefe 1A",
+            "B": "Profesor Jefe 1B"
+        },
+        "2": {
+            "A": "Profesor Jefe 2A",
+            "B": "Profesor Jefe 2B"
+        }
+    },
+    "clases_y_curso_por_profesor_posibles": {
+        "Profesor Matemáticas": [
+            [
+                "Matemáticas", 1
+            ], [
+                "Matemáticas", 2
+            ]
+        ],
+        "Profesor Jefe 1A": [
+            [
+                "Historia", 1
+            ], [
+                "Lenguaje", 1
+            ], [
+                "Ciencias Naturales", 1
+            ], [
+                "Orientación", 1
+            ]
+        ], 
+        "Profesor Jefe 1B": [
+            [
+                "Historia", 1
+            ], [
+                "Lenguaje", 1
+            ], [
+                "Ciencias Naturales", 1
+            ], [
+                "Orientación", 1
+            ]
+        ], 
+        "Profesor Jefe 2A": [
+            [
+                "Historia", 2
+            ], [
+                "Lenguaje", 2
+            ], [
+                "Ciencias Naturales", 2
+            ], [
+                "Orientación", 2
+            ]
+        ], 
+        "Profesor Jefe 2B": [
+            [
+                "Historia", 2
+            ], [
+                "Lenguaje", 2
+            ], [
+                "Ciencias Naturales", 2
+            ], [
+                "Orientación", 2
+            ]
+        ],
+        "Profesor Tecnología y AV": [
+            [
+                "Tecnología", 1
+            ], [
+                "Tecnología", 2
+            ], [
+                "Artes Visuales", 1
+            ], [
+                "Artes Visuales", 2
+            ]
+        ],
+        "Profesor EF": [
+            [
+                "Educación Física", 1
+            ], [
+                "Educación Física", 2
+            ]
+        ],
+        "Profesor Música y Religión": [
+            [
+                "Música", 1
+            ], [
+                "Música", 2
+            ], [
+                "Religión", 1
+            ], [
+                "Religión", 2
+            ]
+        ]
+    }
+}
