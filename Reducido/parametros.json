@@ -17,33 +17,173 @@
     ],
     "horarios": {
         "1A": {
-            "Lunes": 6,
-            "Martes": 7,
-            "Miércoles": 6,
-            "Jueves": 7, 
-            "Viernes": 6
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
         }, 
         "1B": {
-            "Lunes": 6,
-            "Martes": 7,
-            "Miércoles": 6,
-            "Jueves": 7, 
-            "Viernes": 6
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
         },
         "2A": {
-            "Lunes": 6,
-            "Martes": 7,
-            "Miércoles": 6,
-            "Jueves": 7, 
-            "Viernes": 6
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
         },
         "2B": {
-            "Lunes": 6,
-            "Martes": 7,
-            "Miércoles": 6,
-            "Jueves": 7, 
-            "Viernes": 6
-        }
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "3A": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "3B": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "4A": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "4B": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "5A": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "5B": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "6A": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "6B": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "7A": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "7B": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "8A": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "8B": {
+            "Lunes": 7,
+            "Martes": 8,
+            "Miércoles": 8,
+            "Jueves": 8, 
+            "Viernes": 7
+        },
+        "IA": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IB": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IIA": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IIB": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IIIA": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IIIB": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IVA": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        },
+        "IVB": {
+            "Lunes": 8,
+            "Martes": 9,
+            "Miércoles": 9,
+            "Jueves": 9, 
+            "Viernes": 7
+        }       
     },
     "profesores": [
         "Pérez",
@@ -151,6 +291,254 @@
             "Tecnología": 1,
             "Religión": 2,
             "Ciencias_Naturales": 3
+        },
+        "3A": {
+            "Lenguaje": 8,
+            "Matemáticas": 6,
+            "Historia": 3,
+            "Artes_Visuales": 2,
+            "Música": 2,
+            "Educación_Física": 4,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Ciencias_Naturales": 3
+        },
+        "3B": {
+            "Lenguaje": 8,
+            "Matemáticas": 6,
+            "Historia": 3,
+            "Artes_Visuales": 2,
+            "Música": 2,
+            "Educación_Física": 4,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Ciencias_Naturales": 3
+        },
+        "4A": {
+            "Lenguaje": 8,
+            "Matemáticas": 6,
+            "Historia": 3,
+            "Artes_Visuales": 2,
+            "Música": 2,
+            "Educación_Física": 4,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Ciencias_Naturales": 3
+        },
+        "4B": {
+            "Lenguaje": 8,
+            "Matemáticas": 6,
+            "Historia": 3,
+            "Artes_Visuales": 2,
+            "Música": 2,
+            "Educación_Física": 4,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Ciencias_Naturales": 3
+        },
+        "5A": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "5B": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "6A": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "6B": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "7A": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "7B": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "8A": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "8B": {
+            "Lenguaje": 6,
+            "Matemáticas": 6,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Música": 1,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4
+        },
+        "IA": {
+            "Lenguaje": 6,
+            "Matemáticas": 7,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 2,
+            "Religión": 2,
+            "Inglés": 4,
+            "Ciencias_Naturales": 6
+        },
+        "IB": {
+            "Lenguaje": 6,
+            "Matemáticas": 7,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 2,
+            "Religión": 2,
+            "Inglés": 4,
+            "Ciencias_Naturales": 6
+        },
+        "IIA": {
+            "Lenguaje": 6,
+            "Matemáticas": 7,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 2,
+            "Religión": 2,
+            "Inglés": 4,
+            "Ciencias_Naturales": 6
+        },
+        "IIB": {
+            "Lenguaje": 6,
+            "Matemáticas": 7,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Orientación": 1,
+            "Tecnología": 2,
+            "Religión": 2,
+            "Inglés": 4,
+            "Ciencias_Naturales": 6
+        },
+        "IIIA": {
+            "Lenguaje": 3,
+            "Matemáticas": 3,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Consejo_de_Curso": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4,
+            "Filosofía": 3
+        },
+        "IIIB": {
+            "Lenguaje": 3,
+            "Matemáticas": 3,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Consejo_de_Curso": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4,
+            "Filosofía": 3
+        },
+        "IVA": {
+            "Lenguaje": 3,
+            "Matemáticas": 3,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Consejo_de_Curso": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4,
+            "Filosofía": 3
+        },
+        "IVB": {
+            "Lenguaje": 3,
+            "Matemáticas": 3,
+            "Historia": 4,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Consejo_de_Curso": 1,
+            "Religión": 2,
+            "Inglés": 3,
+            "Ciencias_Naturales": 4,
+            "Filosofía": 3
         }
     }
 }
