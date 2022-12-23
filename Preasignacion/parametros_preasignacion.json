@@ -1,0 +1,54 @@
+{
+    "ramos_por_curso": {
+        "IVA": {
+            "Lenguaje": 4,
+            "Matemáticas": 4,
+            "Historia": 3,
+            "Ciencias_Sociales": 2,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Consejo_de_Curso": 1,
+            "Inglés": 4,
+            "Geografía": 3,
+            "Biología": 3,
+            "G2": 4,
+            "Alemán": 5,
+            "Física": 3,
+            "G3": 2
+        },
+        "IVB": {
+            "Lenguaje": 4,
+            "Matemáticas": 4,
+            "Historia": 3,
+            "Ciencias_Sociales": 2,
+            "Artes_Visuales": 2,
+            "Educación_Física": 2,
+            "Consejo_de_Curso": 1,
+            "Inglés": 4,
+            "Geografía": 3,
+            "Biología": 3,
+            "G2": 4,
+            "Alemán": 5,
+            "Física": 3,
+            "G3": 2
+        }
+    },
+    "asignaciones_hechas": {
+        "IVA": {
+            "Lenguaje": "Martínez",
+            "Matemáticas": "Juranovic",
+            "Historia": "Saiss",
+            "Ciencias_Sociales": "Gvardiol",
+            "Artes_Visuales": "Mazraoui",
+            "Educación_Física": "Casemiro",
+            "Consejo_de_Curso": "Amrabat",
+            "Inglés": "Fernández",
+            "Geografía": "Messi",
+            "Biología": "Álvarez",
+            "G2": "Mbappé",
+            "Alemán": "Fernández",
+            "Física": "Juranovic",
+            "G3": "Gvardiol"
+        }
+    }
+}
