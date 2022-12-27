@@ -17,172 +17,172 @@
     ],
     "horarios": {
         "1A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         }, 
         "1B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "2A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "2B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "3A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "3B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "4A": {
             "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
             "Viernes": 7
         },
         "4B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "5A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "5B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "6A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "6B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "7A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "7B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "8A": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "8B": {
-            "Lunes": 7,
-            "Martes": 8,
-            "Miércoles": 8,
-            "Jueves": 8, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IA": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IB": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IIA": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IIB": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IIIA": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IIIB": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IVA": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         },
         "IVB": {
-            "Lunes": 8,
-            "Martes": 9,
-            "Miércoles": 9,
-            "Jueves": 9, 
-            "Viernes": 7
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9], 
+            "Viernes": [1,2,3,4,5,6,7]
         }       
     },
     "profesores": [
@@ -243,6 +243,12 @@
             {"__tuple__": true, "items": ["Ronaldo", "Ciencias_Naturales"]}
         ]
     },
+    "modulos_combinados": [
+        {"__tuple__": true, "items": [["2A", "2B"], ["González", "Mbappé"], "Educación_Física"]}
+    ],
+    "clases_simultaneas": [
+        {"__tuple__": true, "items": ["2A", "2B"]}, "Educación_Física"
+    ],
     "ramos_por_curso": {
         "1A": {
             "Lenguaje": 8,
