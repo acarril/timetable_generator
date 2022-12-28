@@ -72,9 +72,14 @@
                 {"__tuple__": true, "items": ["1A", "Tecnología"]},
                 {"__tuple__": true, "items": ["1A", "Religión"]},
                 {"__tuple__": true, "items": ["2A", "Música"]},
+                {"__tuple__": true, "items": ["2B", "Música"]},
                 {"__tuple__": true, "items": ["2A", "Educación_Física"]},
                 {"__tuple__": true, "items": ["2A", "Tecnología"]},
                 {"__tuple__": true, "items": ["2A", "Religión"]}
+            ],
+            "2": [
+                {"__tuple__": true, "items": ["2A", "Educación_Física"]},
+                {"__tuple__": true, "items": ["2B", "Educación_Física"]}
             ]
         },
         "Messi": {
@@ -92,7 +97,9 @@
                 {"__tuple__": true, "items": ["1B", "Tecnología"]},
                 {"__tuple__": true, "items": ["2B", "Tecnología"]}
             ],
-            "2": [
+            "2": [ 
+                {"__tuple__": true, "items": ["2A", "Educación_Física"]},
+                {"__tuple__": true, "items": ["2B", "Educación_Física"]},
                 {"__tuple__": true, "items": ["2A", "Orientación"]},
                 {"__tuple__": true, "items": ["2B", "Orientación"]}
             ]
@@ -107,6 +114,7 @@
         "Perking": {
             "1": [
                 {"__tuple__": true, "items": ["2B", "Lenguaje"]},
+                {"__tuple__": true, "items": ["2A", "Música"]},
                 {"__tuple__": true, "items": ["2B", "Música"]},
                 {"__tuple__": true, "items": ["2B", "Religión"]},
                 {"__tuple__": true, "items": ["2B", "Ciencias_Naturales"]}
@@ -116,72 +124,86 @@
             "1": [
                 {"__tuple__": true, "items": ["2B", "Matemáticas"]},
                 {"__tuple__": true, "items": ["2B", "Artes_Visuales"]},
-                {"__tuple__": true, "items": ["2B", "Historia"]},
-                {"__tuple__": true, "items": ["2B", "Educación_Física"]}
+                {"__tuple__": true, "items": ["2B", "Historia"]}
             ]
         }
     },
     "profesores_por_curso": {
-        "1A": [
-            {"__tuple__": true, "items": ["Rodríguez", "Lenguaje"]},
-            {"__tuple__": true, "items": ["Pérez", "Matemáticas"]},
-            {"__tuple__": true, "items": ["Rodríguez", "Historia"]},
-            {"__tuple__": true, "items": ["Pérez", "Artes_Visuales"]},
-            {"__tuple__": true, "items": ["González", "Música"]},
-            {"__tuple__": true, "items": ["González", "Educación_Física"]},
-            {"__tuple__": true, "items": ["González", "Orientación"]},
-            {"__tuple__": true, "items": ["González", "Tecnología"]},
-            {"__tuple__": true, "items": ["González", "Religión"]},
-            {"__tuple__": true, "items": ["Rodríguez", "Ciencias_Naturales"]}
-        ],
-        "1B": [
-            {"__tuple__": true, "items": ["Messi", "Lenguaje"]},
-            {"__tuple__": true, "items": ["Messi", "Matemáticas"]},
-            {"__tuple__": true, "items": ["Messi", "Historia"]},
-            {"__tuple__": true, "items": ["Mbappé", "Artes_Visuales"]},
-            {"__tuple__": true, "items": ["Ronaldo", "Música"]},
-            {"__tuple__": true, "items": ["Mbappé", "Educación_Física"]},
-            {"__tuple__": true, "items": ["Mbappé", "Orientación"]},
-            {"__tuple__": true, "items": ["Mbappé", "Tecnología"]},
-            {"__tuple__": true, "items": ["Ronaldo", "Religión"]},
-            {"__tuple__": true, "items": ["Ronaldo", "Ciencias_Naturales"]}
-        ],
-        "2A": [
-            {"__tuple__": true, "items": ["Rodríguez", "Lenguaje"]},
-            {"__tuple__": true, "items": ["Pérez", "Matemáticas"]},
-            {"__tuple__": true, "items": ["Rodríguez", "Historia"]},
-            {"__tuple__": true, "items": ["Pérez", "Artes_Visuales"]},
-            {"__tuple__": true, "items": ["González", "Música"]},
-            {"__tuple__": true, "items": ["González", "Educación_Física"]},
-            {"__tuple__": true, "items": ["Mbappé", "Orientación"]},
-            {"__tuple__": true, "items": ["González", "Tecnología"]},
-            {"__tuple__": true, "items": ["González", "Religión"]},
-            {"__tuple__": true, "items": ["Rodríguez", "Ciencias_Naturales"]}
-        ],
-        "2B": [
-            {"__tuple__": true, "items": ["Perking", "Lenguaje"]},
-            {"__tuple__": true, "items": ["Maradona", "Matemáticas"]},
-            {"__tuple__": true, "items": ["Maradona", "Historia"]},
-            {"__tuple__": true, "items": ["Maradona", "Artes_Visuales"]},
-            {"__tuple__": true, "items": ["Perking", "Música"]},
-            {"__tuple__": true, "items": ["Maradona", "Educación_Física"]},
-            {"__tuple__": true, "items": ["Mbappé", "Orientación"]},
-            {"__tuple__": true, "items": ["Mbappé", "Tecnología"]},
-            {"__tuple__": true, "items": ["Perking", "Religión"]},
-            {"__tuple__": true, "items": ["Perking", "Ciencias_Naturales"]}
-        ]
+        "1A": {
+            "1": [
+                {"__tuple__": true, "items": ["Rodríguez", "Lenguaje"]},
+                {"__tuple__": true, "items": ["Pérez", "Matemáticas"]},
+                {"__tuple__": true, "items": ["Rodríguez", "Historia"]},
+                {"__tuple__": true, "items": ["Pérez", "Artes_Visuales"]},
+                {"__tuple__": true, "items": ["González", "Música"]},
+                {"__tuple__": true, "items": ["González", "Educación_Física"]},
+                {"__tuple__": true, "items": ["González", "Orientación"]},
+                {"__tuple__": true, "items": ["González", "Tecnología"]},
+                {"__tuple__": true, "items": ["González", "Religión"]},
+                {"__tuple__": true, "items": ["Rodríguez", "Ciencias_Naturales"]}
+            ]
+        },
+        "1B": {
+            "1": [
+                {"__tuple__": true, "items": ["Messi", "Lenguaje"]},
+                {"__tuple__": true, "items": ["Messi", "Matemáticas"]},
+                {"__tuple__": true, "items": ["Messi", "Historia"]},
+                {"__tuple__": true, "items": ["Mbappé", "Artes_Visuales"]},
+                {"__tuple__": true, "items": ["Ronaldo", "Música"]},
+                {"__tuple__": true, "items": ["Mbappé", "Educación_Física"]},
+                {"__tuple__": true, "items": ["Mbappé", "Orientación"]},
+                {"__tuple__": true, "items": ["Mbappé", "Tecnología"]},
+                {"__tuple__": true, "items": ["Ronaldo", "Religión"]},
+                {"__tuple__": true, "items": ["Ronaldo", "Ciencias_Naturales"]}
+            ]
+        },
+        "2A": {
+            "1": [
+                {"__tuple__": true, "items": ["Rodríguez", "Lenguaje"]},
+                {"__tuple__": true, "items": ["Pérez", "Matemáticas"]},
+                {"__tuple__": true, "items": ["Rodríguez", "Historia"]},
+                {"__tuple__": true, "items": ["Pérez", "Artes_Visuales"]},
+                {"__tuple__": true, "items": ["Mbappé", "Orientación"]},
+                {"__tuple__": true, "items": ["González", "Tecnología"]},
+                {"__tuple__": true, "items": ["González", "Religión"]},
+                {"__tuple__": true, "items": ["Rodríguez", "Ciencias_Naturales"]}
+            ],
+            "M": [
+                {"__tuple__": true, "items": ["González", "Educación_Física"]},
+                {"__tuple__": true, "items": ["Mbappé", "Educación_Física"]},
+                {"__tuple__": true, "items": ["González", "Música"]},
+                {"__tuple__": true, "items": ["Perking", "Música"]}
+            ]
+        },
+        "2B": {
+            "1": [
+                {"__tuple__": true, "items": ["Perking", "Lenguaje"]},
+                {"__tuple__": true, "items": ["Maradona", "Matemáticas"]},
+                {"__tuple__": true, "items": ["Maradona", "Historia"]},
+                {"__tuple__": true, "items": ["Maradona", "Artes_Visuales"]},
+                {"__tuple__": true, "items": ["Mbappé", "Orientación"]},
+                {"__tuple__": true, "items": ["Mbappé", "Tecnología"]},
+                {"__tuple__": true, "items": ["Perking", "Religión"]},
+                {"__tuple__": true, "items": ["Perking", "Ciencias_Naturales"]}
+            ],
+            "M": [
+                {"__tuple__": true, "items": ["González", "Educación_Física"]},
+                {"__tuple__": true, "items": ["Mbappé", "Educación_Física"]},
+                {"__tuple__": true, "items": ["González", "Música"]},
+                {"__tuple__": true, "items": ["Perking", "Música"]}
+            ]
+        }        
     },
     "multiples_cursos": [
-        {"__tuple__": true, "items": [{"__tuple__": true, "items": ["2A","2B"]}, "Mbappé", "Orientación"]}
+        {"__tuple__": true, "items": [{"__tuple__": true, "items": ["2A","2B"]}, "Mbappé", "Orientación"]},
+        {"__tuple__": true, "items": [{"__tuple__": true, "items": ["2A", "2B"]}, "González", "Educación_Física"]},
+        {"__tuple__": true, "items": [{"__tuple__": true, "items": ["2A", "2B"]}, "Mbappé", "Educación_Física"]}
     ],
     "multiples_profesores": [
         {"__tuple__": true, "items": ["2A", {"__tuple__": true, "items": ["González", "Perking"]}, "Música"]},
-        {"__tuple__": true, "items": ["2B", {"__tuple__": true, "items": ["González", "Perking"]}, "Música"]}
-    ],
-    "multiples_cursos_y_profesores": [
-        {"__tuple__": true, "items": [
-            {"__tuple__": true, "items": ["2A", "2B"]}, {"__tuple__": true, "items": ["González", "Mbappé"]}, "Educación_Física"
-        ]}
+        {"__tuple__": true, "items": ["2B", {"__tuple__": true, "items": ["González", "Perking"]}, "Música"]},
+        {"__tuple__": true, "items": ["2A", {"__tuple__": true, "items": ["González", "Mbappé"]}, "Educación_Física"]},
+        {"__tuple__": true, "items": ["2B", {"__tuple__": true, "items": ["González", "Mbappé"]}, "Educación_Física"]}
     ],
     "ramos_por_curso": {
         "1A": {
