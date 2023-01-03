@@ -1,0 +1,1020 @@
+{
+    "profesores_por_curso": {
+        "4A": {
+            "1": [
+                [
+                    "Modric",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Artes_Visuales"
+                ],
+                [
+                    "Placeholder",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Lenguaje"
+                ],
+                [
+                    "Messi",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "Placeholder",
+                    "M\u00fasica"
+                ],
+                [
+                    "Placeholder",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Taller_Comprensi\u00f3n_Lectora"
+                ],
+                [
+                    "Placeholder",
+                    "Tecnolog\u00eda"
+                ]
+            ]
+        },
+        "4B": {
+            "1": [
+                [
+                    "Modric",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Artes_Visuales"
+                ],
+                [
+                    "Placeholder",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Lenguaje"
+                ],
+                [
+                    "Hakimi",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "Placeholder",
+                    "M\u00fasica"
+                ],
+                [
+                    "Placeholder",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Taller_Comprensi\u00f3n_Lectora"
+                ],
+                [
+                    "Placeholder",
+                    "Tecnolog\u00eda"
+                ]
+            ]
+        },
+        "5A": {
+            "1": [
+                [
+                    "S\u00e1nchez",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Artes_Visuales"
+                ],
+                [
+                    "Placeholder",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "Placeholder",
+                    "Lenguaje"
+                ],
+                [
+                    "Messi",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "Placeholder",
+                    "M\u00fasica"
+                ],
+                [
+                    "Placeholder",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Tecnolog\u00eda"
+                ]
+            ]
+        },
+        "5B": {
+            "1": [
+                [
+                    "Modric",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Artes_Visuales"
+                ],
+                [
+                    "Placeholder",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "Placeholder",
+                    "Lenguaje"
+                ],
+                [
+                    "Hakimi",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "Placeholder",
+                    "M\u00fasica"
+                ],
+                [
+                    "Placeholder",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Tecnolog\u00eda"
+                ]
+            ]
+        },
+        "8A": {
+            "1": [
+                [
+                    "S\u00e1nchez",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "F\u00edsica"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "Mbapp\u00e9",
+                    "Lenguaje"
+                ],
+                [
+                    "Messi",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "Placeholder",
+                    "M\u00fasica"
+                ],
+                [
+                    "Placeholder",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Qu\u00edmica"
+                ],
+                [
+                    "Placeholder",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Tecnolog\u00eda"
+                ]
+            ]
+        },
+        "8B": {
+            "1": [
+                [
+                    "Modric",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "F\u00edsica"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "Mbapp\u00e9",
+                    "Lenguaje"
+                ],
+                [
+                    "Hakimi",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "Placeholder",
+                    "M\u00fasica"
+                ],
+                [
+                    "Placeholder",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Qu\u00edmica"
+                ],
+                [
+                    "Placeholder",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "Placeholder",
+                    "Tecnolog\u00eda"
+                ]
+            ]
+        },
+        "IVA": {
+            "1": [
+                [
+                    "S\u00e1nchez",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Artes_Visuales"
+                ],
+                [
+                    "Placeholder",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "Placeholder",
+                    "Ciencias_Sociales"
+                ],
+                [
+                    "Placeholder",
+                    "Consejo_de_Curso"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "G2"
+                ],
+                [
+                    "Placeholder",
+                    "G3"
+                ],
+                [
+                    "Placeholder",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "Mbapp\u00e9",
+                    "Lenguaje"
+                ],
+                [
+                    "Messi",
+                    "Matem\u00e1ticas"
+                ]
+            ]
+        },
+        "IVB": {
+            "1": [
+                [
+                    "Placeholder",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "Placeholder",
+                    "Artes_Visuales"
+                ],
+                [
+                    "Placeholder",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "Placeholder",
+                    "Ciencias_Sociales"
+                ],
+                [
+                    "Placeholder",
+                    "Consejo_de_Curso"
+                ],
+                [
+                    "Placeholder",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "F\u00edsica"
+                ],
+                [
+                    "Placeholder",
+                    "G2"
+                ],
+                [
+                    "Placeholder",
+                    "G3"
+                ],
+                [
+                    "Placeholder",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "Ronaldo",
+                    "Historia"
+                ],
+                [
+                    "Placeholder",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "Mbapp\u00e9",
+                    "Lenguaje"
+                ],
+                [
+                    "Hakimi",
+                    "Matem\u00e1ticas"
+                ]
+            ]
+        }
+    },
+    "ramos_por_curso": {
+        "4A": {
+            "Orientaci\u00f3n": 1,
+            "Educaci\u00f3n_F\u00edsica": 3,
+            "Lenguaje": 7,
+            "Matem\u00e1ticas": 6,
+            "Alem\u00e1n": 6,
+            "Ciencias_Naturales": 3,
+            "Religi\u00f3n": 2,
+            "Historia": 3,
+            "Taller_Comprensi\u00f3n_Lectora": 1,
+            "M\u00fasica": 2,
+            "Tecnolog\u00eda": 2,
+            "Artes_Visuales": 2
+        },
+        "4B": {
+            "Orientaci\u00f3n": 1,
+            "Educaci\u00f3n_F\u00edsica": 3,
+            "Lenguaje": 7,
+            "Matem\u00e1ticas": 6,
+            "Alem\u00e1n": 6,
+            "Ciencias_Naturales": 3,
+            "Religi\u00f3n": 2,
+            "Historia": 3,
+            "Taller_Comprensi\u00f3n_Lectora": 1,
+            "M\u00fasica": 2,
+            "Tecnolog\u00eda": 2,
+            "Artes_Visuales": 2
+        },
+        "5A": {
+            "Orientaci\u00f3n": 1,
+            "Lenguaje": 6,
+            "Ingl\u00e9s": 4,
+            "Matem\u00e1ticas": 6,
+            "Alem\u00e1n": 6,
+            "Ciencias_Naturales": 3,
+            "Geograf\u00eda": 2,
+            "Historia": 2,
+            "Educaci\u00f3n_F\u00edsica": 2,
+            "Religi\u00f3n": 2,
+            "M\u00fasica": 2,
+            "Artes_Visuales": 2,
+            "Tecnolog\u00eda": 2
+        },
+        "5B": {
+            "Orientaci\u00f3n": 1,
+            "Lenguaje": 6,
+            "Ingl\u00e9s": 4,
+            "Matem\u00e1ticas": 6,
+            "Alem\u00e1n": 6,
+            "Ciencias_Naturales": 3,
+            "Geograf\u00eda": 2,
+            "Historia": 2,
+            "Educaci\u00f3n_F\u00edsica": 2,
+            "Religi\u00f3n": 2,
+            "M\u00fasica": 2,
+            "Artes_Visuales": 2,
+            "Tecnolog\u00eda": 2
+        },
+        "8A": {
+            "Matem\u00e1ticas": 6,
+            "Orientaci\u00f3n": 1,
+            "Religi\u00f3n": 2,
+            "Alem\u00e1n": 6,
+            "Lenguaje": 6,
+            "Tecnolog\u00eda": 2,
+            "Educaci\u00f3n_F\u00edsica": 2,
+            "Qu\u00edmica": 2,
+            "Historia": 4,
+            "Biolog\u00eda": 2,
+            "F\u00edsica": 2,
+            "Ingl\u00e9s": 4,
+            "M\u00fasica": 2
+        },
+        "8B": {
+            "Matem\u00e1ticas": 6,
+            "Orientaci\u00f3n": 1,
+            "Religi\u00f3n": 2,
+            "Alem\u00e1n": 6,
+            "Lenguaje": 6,
+            "Tecnolog\u00eda": 2,
+            "Educaci\u00f3n_F\u00edsica": 2,
+            "Qu\u00edmica": 2,
+            "Historia": 4,
+            "Biolog\u00eda": 2,
+            "F\u00edsica": 2,
+            "Ingl\u00e9s": 4,
+            "M\u00fasica": 2
+        },
+        "IVA": {
+            "Lenguaje": 4,
+            "Matem\u00e1ticas": 4,
+            "Historia": 3,
+            "Ciencias_Sociales": 2,
+            "Artes_Visuales": 2,
+            "Educaci\u00f3n_F\u00edsica": 2,
+            "Consejo_de_Curso": 1,
+            "Ingl\u00e9s": 4,
+            "Geograf\u00eda": 3,
+            "Biolog\u00eda": 3,
+            "G2": 4,
+            "Alem\u00e1n": 5,
+            "F\u00edsica": 3,
+            "G3": 2
+        },
+        "IVB": {
+            "Lenguaje": 4,
+            "Matem\u00e1ticas": 4,
+            "Historia": 3,
+            "Ciencias_Sociales": 2,
+            "Artes_Visuales": 2,
+            "Educaci\u00f3n_F\u00edsica": 2,
+            "Consejo_de_Curso": 1,
+            "Ingl\u00e9s": 4,
+            "Geograf\u00eda": 3,
+            "Biolog\u00eda": 3,
+            "G2": 4,
+            "Alem\u00e1n": 5,
+            "F\u00edsica": 3,
+            "G3": 2
+        }
+    },
+    "carga_profesores": {
+        "Hakimi": {
+            "1": [
+                [
+                    "4B",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "5B",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "8B",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "IVB",
+                    "Matem\u00e1ticas"
+                ]
+            ]
+        },
+        "Mbapp\u00e9": {
+            "1": [
+                [
+                    "8A",
+                    "Lenguaje"
+                ],
+                [
+                    "8B",
+                    "Lenguaje"
+                ],
+                [
+                    "IVA",
+                    "Lenguaje"
+                ],
+                [
+                    "IVB",
+                    "Lenguaje"
+                ]
+            ]
+        },
+        "Messi": {
+            "1": [
+                [
+                    "4A",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "5A",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "8A",
+                    "Matem\u00e1ticas"
+                ],
+                [
+                    "IVA",
+                    "Matem\u00e1ticas"
+                ]
+            ]
+        },
+        "Modric": {
+            "1": [
+                [
+                    "4A",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "4B",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "5B",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "8B",
+                    "Alem\u00e1n"
+                ]
+            ]
+        },
+        "Placeholder": {
+            "1": [
+                [
+                    "4A",
+                    "Artes_Visuales"
+                ],
+                [
+                    "4A",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "4A",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "4A",
+                    "Lenguaje"
+                ],
+                [
+                    "4A",
+                    "M\u00fasica"
+                ],
+                [
+                    "4A",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "4A",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "4A",
+                    "Taller_Comprensi\u00f3n_Lectora"
+                ],
+                [
+                    "4A",
+                    "Tecnolog\u00eda"
+                ],
+                [
+                    "4B",
+                    "Artes_Visuales"
+                ],
+                [
+                    "4B",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "4B",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "4B",
+                    "Lenguaje"
+                ],
+                [
+                    "4B",
+                    "M\u00fasica"
+                ],
+                [
+                    "4B",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "4B",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "4B",
+                    "Taller_Comprensi\u00f3n_Lectora"
+                ],
+                [
+                    "4B",
+                    "Tecnolog\u00eda"
+                ],
+                [
+                    "5A",
+                    "Artes_Visuales"
+                ],
+                [
+                    "5A",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "5A",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "5A",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "5A",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "5A",
+                    "Lenguaje"
+                ],
+                [
+                    "5A",
+                    "M\u00fasica"
+                ],
+                [
+                    "5A",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "5A",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "5A",
+                    "Tecnolog\u00eda"
+                ],
+                [
+                    "5B",
+                    "Artes_Visuales"
+                ],
+                [
+                    "5B",
+                    "Ciencias_Naturales"
+                ],
+                [
+                    "5B",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "5B",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "5B",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "5B",
+                    "Lenguaje"
+                ],
+                [
+                    "5B",
+                    "M\u00fasica"
+                ],
+                [
+                    "5B",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "5B",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "5B",
+                    "Tecnolog\u00eda"
+                ],
+                [
+                    "8A",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "8A",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "8A",
+                    "F\u00edsica"
+                ],
+                [
+                    "8A",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "8A",
+                    "M\u00fasica"
+                ],
+                [
+                    "8A",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "8A",
+                    "Qu\u00edmica"
+                ],
+                [
+                    "8A",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "8A",
+                    "Tecnolog\u00eda"
+                ],
+                [
+                    "8B",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "8B",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "8B",
+                    "F\u00edsica"
+                ],
+                [
+                    "8B",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "8B",
+                    "M\u00fasica"
+                ],
+                [
+                    "8B",
+                    "Orientaci\u00f3n"
+                ],
+                [
+                    "8B",
+                    "Qu\u00edmica"
+                ],
+                [
+                    "8B",
+                    "Religi\u00f3n"
+                ],
+                [
+                    "8B",
+                    "Tecnolog\u00eda"
+                ],
+                [
+                    "IVA",
+                    "Artes_Visuales"
+                ],
+                [
+                    "IVA",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "IVA",
+                    "Ciencias_Sociales"
+                ],
+                [
+                    "IVA",
+                    "Consejo_de_Curso"
+                ],
+                [
+                    "IVA",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "IVA",
+                    "F\u00edsica"
+                ],
+                [
+                    "IVA",
+                    "G2"
+                ],
+                [
+                    "IVA",
+                    "G3"
+                ],
+                [
+                    "IVA",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "IVA",
+                    "Ingl\u00e9s"
+                ],
+                [
+                    "IVB",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "IVB",
+                    "Artes_Visuales"
+                ],
+                [
+                    "IVB",
+                    "Biolog\u00eda"
+                ],
+                [
+                    "IVB",
+                    "Ciencias_Sociales"
+                ],
+                [
+                    "IVB",
+                    "Consejo_de_Curso"
+                ],
+                [
+                    "IVB",
+                    "Educaci\u00f3n_F\u00edsica"
+                ],
+                [
+                    "IVB",
+                    "F\u00edsica"
+                ],
+                [
+                    "IVB",
+                    "G2"
+                ],
+                [
+                    "IVB",
+                    "G3"
+                ],
+                [
+                    "IVB",
+                    "Geograf\u00eda"
+                ],
+                [
+                    "IVB",
+                    "Ingl\u00e9s"
+                ]
+            ]
+        },
+        "Ronaldo": {
+            "1": [
+                [
+                    "4A",
+                    "Historia"
+                ],
+                [
+                    "4B",
+                    "Historia"
+                ],
+                [
+                    "5A",
+                    "Historia"
+                ],
+                [
+                    "5B",
+                    "Historia"
+                ],
+                [
+                    "8A",
+                    "Historia"
+                ],
+                [
+                    "8B",
+                    "Historia"
+                ],
+                [
+                    "IVA",
+                    "Historia"
+                ],
+                [
+                    "IVB",
+                    "Historia"
+                ]
+            ]
+        },
+        "S\u00e1nchez": {
+            "1": [
+                [
+                    "5A",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "8A",
+                    "Alem\u00e1n"
+                ],
+                [
+                    "IVA",
+                    "Alem\u00e1n"
+                ]
+            ]
+        }
+    }
+}

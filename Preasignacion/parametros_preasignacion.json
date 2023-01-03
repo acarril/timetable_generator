@@ -1,5 +1,96 @@
 {
-    "ramos_por_curso": {
+    "clases_ya_asignadas": [
+        ["Matemáticas","Messi", "4A"]
+    ],
+    "cantidad_de_horas_por_ramo_por_curso": {
+        "4A": {
+            "Orientación": 1,
+            "Educación_Física": 3,
+            "Lenguaje": 7,
+            "Matemáticas": 6,
+            "Alemán": 6,
+            "Ciencias_Naturales": 3,
+            "Religión": 2,
+            "Historia": 3,
+            "Taller_Comprensión_Lectora": 1,
+            "Música": 2,
+            "Tecnología": 2,
+            "Artes_Visuales": 2
+        },
+        "4B": {
+            "Orientación": 1,
+            "Educación_Física": 3,
+            "Lenguaje": 7,
+            "Matemáticas": 6,
+            "Alemán": 6,
+            "Ciencias_Naturales": 3,
+            "Religión": 2,
+            "Historia": 3,
+            "Taller_Comprensión_Lectora": 1,
+            "Música": 2,
+            "Tecnología": 2,
+            "Artes_Visuales": 2
+        },
+        "5A": {
+            "Orientación": 1,   
+            "Lenguaje": 6,
+            "Inglés": 4,
+            "Matemáticas": 6,
+            "Alemán": 6,
+            "Ciencias_Naturales": 3,
+            "Geografía": 2,
+            "Historia": 2,
+            "Educación_Física": 2,
+            "Religión": 2,
+            "Música": 2,
+            "Artes_Visuales": 2,
+            "Tecnología": 2
+        },
+        "5B": {
+            "Orientación": 1,   
+            "Lenguaje": 6,
+            "Inglés": 4,
+            "Matemáticas": 6,
+            "Alemán": 6,
+            "Ciencias_Naturales": 3,
+            "Geografía": 2,
+            "Historia": 2,
+            "Educación_Física": 2,
+            "Religión": 2,
+            "Música": 2,
+            "Artes_Visuales": 2,
+            "Tecnología": 2
+        },
+        "8A": {
+            "Matemáticas": 6,
+            "Orientación": 1,
+            "Religión": 2,
+            "Alemán": 6,
+            "Lenguaje": 6,
+            "Tecnología": 2,
+            "Educación_Física": 2,
+            "Química": 2,
+            "Historia": 4,
+            "Biología": 2,
+            "Física": 2, 
+            "Inglés": 4,
+            "Música": 2
+        },
+        "8B": {
+            "Matemáticas": 6,
+            "Orientación": 1,
+            "Religión": 2,
+            "Alemán": 6,
+            "Lenguaje": 6,
+            "Tecnología": 2,
+            "Educación_Física": 2,
+            "Química": 2,
+            "Historia": 4,
+            "Biología": 2,
+            "Física": 2, 
+            "Inglés": 4,
+            "Música": 2
+        },
         "IVA": {
             "Lenguaje": 4,
             "Matemáticas": 4,
@@ -33,22 +124,92 @@
             "G3": 2
         }
     },
-    "asignaciones_hechas": {
-        "IVA": {
-            "Lenguaje": "Martínez",
-            "Matemáticas": "Juranovic",
-            "Historia": "Saiss",
-            "Ciencias_Sociales": "Gvardiol",
-            "Artes_Visuales": "Mazraoui",
-            "Educación_Física": "Casemiro",
-            "Consejo_de_Curso": "Amrabat",
-            "Inglés": "Fernández",
-            "Geografía": "Messi",
-            "Biología": "Álvarez",
-            "G2": "Mbappé",
-            "Alemán": "Fernández",
-            "Física": "Juranovic",
-            "G3": "Gvardiol"
-        }
+    "disponibilidad_horaria": {
+        "Messi": 25,
+        "Mbappé": 25,
+        "Ronaldo": 25,
+        "Modric": 25,
+        "Sánchez": 20,
+        "Hakimi": 25
+    },
+    "ramos_y_cursos_dictados_por_profesor": {
+        "Messi": [
+           ["Matemáticas", "4A"], 
+           ["Matemáticas", "5A"],
+           ["Matemáticas", "8A"],
+           ["Matemáticas", "IVA"]
+        ],
+        "Mbappé": [
+           ["Lenguaje", "4A"],
+           ["Lenguaje", "4B"],
+           ["Lenguaje", "5A"],
+           ["Lenguaje", "5B"],
+           ["Lenguaje", "8A"],
+           ["Lenguaje", "8B"],
+           ["Lenguaje", "IVA"],
+           ["Lenguaje", "IVB"]
+        ],
+        "Ronaldo": [
+           ["Historia", "4A"],
+           ["Historia", "4B"],
+           ["Historia", "5A"],
+           ["Historia", "5B"],
+           ["Historia", "8A"],
+           ["Historia", "8B"],
+           ["Historia", "IVA"],
+           ["Historia", "IVB"]
+        ],
+        "Modric": [
+           ["Alemán", "4A"],
+           ["Alemán", "4B"],
+           ["Alemán", "5A"],
+           ["Alemán", "5B"],
+           ["Alemán", "8A"],
+           ["Alemán", "8B"],
+           ["Alemán", "IVA"],
+           ["Alemán", "IVB"]
+        ],
+        "Sánchez": [
+           ["Alemán", "4A"],
+           ["Alemán", "4B"],
+           ["Alemán", "5A"],
+           ["Alemán", "5B"],
+           ["Alemán", "8A"],
+           ["Alemán", "8B"],
+           ["Alemán", "IVA"],
+           ["Alemán", "IVB"]
+        ],
+        "Hakimi": [
+           ["Matemáticas", "4B"], 
+           ["Matemáticas", "5B"],
+           ["Matemáticas", "8B"],
+           ["Matemáticas", "IVB"]
+        ]
+    },
+    "preferencias_profesores": {
+        "Messi": [
+           ["Matemáticas", "8A"],
+           ["Matemáticas", "IVA"]
+        ],
+        "Mbappé": [
+           ["Lenguaje", "IVA"],
+           ["Lenguaje", "IVB"]
+        ],
+        "Ronaldo": [
+           ["Historia", "8A"],
+           ["Historia", "8B"]
+        ],
+        "Modric": [
+           ["Alemán", "4A"],
+           ["Alemán", "4B"]
+        ],
+        "Sánchez": [
+           ["Alemán", "4B"],
+           ["Alemán", "5A"]
+        ],
+        "Hakimi": [
+           ["Matemáticas", "4B"], 
+           ["Matemáticas", "5B"]
+        ]
     }
 }
