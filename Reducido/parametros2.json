@@ -195,7 +195,7 @@
         }        
     },
     "multiples_cursos": [
-        [["2A","2B"], "Mbappé", "Orientación"],
+        [["2A", "2B"], "Mbappé", "Orientación"],
         [["2A", "2B"], "González", "Educación_Física"],
         [["2A", "2B"], "Mbappé", "Educación_Física"]
     ],
