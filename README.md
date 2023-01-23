@@ -20,6 +20,7 @@ El archivo más importante es `modelo_limpio.ipynb` que presenta la última vers
 3. Se fijan algunas clases y se ponen como opción algunas reglas. Estas reglas pueden ser, pero no están limitadas a: disposición de profesores, veto de algunos módulos, simultaneidad de algunas clases. Todas estas reglas se ponen en una lista de prioridades, de forma que, si no se pueden lograr todas al mismo tiempo, se prioricen algunas sobre otras.
 
 ## Herramientas implementadas
+- [ ] asdf
 - [x]
 
 ## Trabajo futuro
