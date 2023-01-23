@@ -21,8 +21,10 @@ El archivo más importante es `modelo_limpio.ipynb` que presenta la última vers
 
 ## Herramientas implementadas
 - [ ] asdf
-- [x]
-- [ x ]
+- [x] sdfads
+- [ x ] asdadsfas
+- [X] asdfasdfa
+- [ X ] asdfa
 
 
 ## Trabajo futuro
