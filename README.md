@@ -19,6 +19,9 @@ El archivo más importante es `modelo_limpio.ipynb` que presenta la última vers
 2. Se elabora la forma que se quiere que tenga cada horario, distribuyendo la cantidad de horas que se ingresaron en el paso anterior en los módulos de clases disponibles.
 3. Se fijan algunas clases y se ponen como opción algunas reglas. Estas reglas pueden ser, pero no están limitadas a: disposición de profesores, veto de algunos módulos, simultaneidad de algunas clases. Todas estas reglas se ponen en una lista de prioridades, de forma que, si no se pueden lograr todas al mismo tiempo, se prioricen algunas sobre otras.
 
+## Herramientas implementadas
+- [x]
+
 ## Trabajo futuro
 - Generar archivos `.json` a partir de una interfaz gráfica (hay una idea de esto en el archivo `idea_programa.py`, pero muy básica)
 - Conseguirse datos reales
