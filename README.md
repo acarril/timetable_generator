@@ -22,6 +22,8 @@ El archivo más importante es `modelo_limpio.ipynb` que presenta la última vers
 ## Herramientas implementadas
 - [ ] asdf
 - [x]
+- [ x ]
+
 
 ## Trabajo futuro
 - Generar archivos `.json` a partir de una interfaz gráfica (hay una idea de esto en el archivo `idea_programa.py`, pero muy básica)
