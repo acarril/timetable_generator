@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QAction, QTableWidget, QTableWidgetItem, QVBoxLayout, QComboBox, QAbstractItemView, QPushButton, QLabel
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QAction, QTableWidget, QTableWidgetItem, QVBoxLayout, \
+    QComboBox, QAbstractItemView, QPushButton, QLabel, QLineEdit, QSpinBox, QHBoxLayout
 from PyQt5.QtCore import QRect
 import sys
 
@@ -8,7 +9,7 @@ data = {'Lunes':[' ',' ',' ',' ',' ',' ',' ',' '],
         'Jueves':[' ',' ',' ',' ',' ',' ',' ',' '],
         'Viernes':[' ',' ',' ',' ',' ',' ',' ',' ']}
 
-class VentanaPrincipal(QWidget):
+class VentanaHorario(QWidget):
     def __init__(self, tamano_ventana):
         super().__init__()
         self.init_gui(tamano_ventana)
@@ -122,10 +123,77 @@ class VentanaPrincipal(QWidget):
             self.cbs[i].addItem('Lenguaje')
             self.table.setCellWidget(self.selecciones[i][0], self.selecciones[i][1], self.cbs[i])
 
+class CantidadModulos(QWidget):
+    def __init__(self, tamano_ventana):
+        super().__init__()
+        self.init_gui(tamano_ventana)
+
+    def init_gui(self, tamano_ventana):
+        self.setGeometry(tamano_ventana)
+        self.setWindowTitle('Generador Horarios')
+
+        self.contenedor = QVBoxLayout()
+
+        self.vbox = QVBoxLayout()
+        self.boton = QVBoxLayout()
+        
+        self.lista_hboxs = []
+        self.lista_infos = []
+
+        hbox = QHBoxLayout()
+        self.lista_hboxs.append(hbox)
+
+        nombre_ramo = QLineEdit()
+
+        nombre_profesor = QComboBox()
+        nombre_profesor.addItems([])
+        nombre_profesor.setEditable(True)
+
+        cantidad_horas = QSpinBox()
+
+        self.boton = QPushButton('+')
+
+        self.boton.clicked.connect(self.agregar_otro_ramo)
+
+        self.lista_infos.append((nombre_ramo,nombre_profesor,cantidad_horas))
+
+        hbox.addWidget(nombre_ramo)
+        hbox.addWidget(nombre_profesor)
+        hbox.addWidget(cantidad_horas)
+
+        self.vbox.addLayout(hbox)
+
+        self.contenedor.addLayout(self.vbox)
+
+        self.contenedor.addWidget(self.boton)
+
+        self.setLayout(self.contenedor)
+
+
+    def agregar_otro_ramo(self):
+        hbox = QHBoxLayout()
+
+        nombre_ramo = QLineEdit()
+        nombre_profesor = QComboBox()
+        nombre_profesor.addItems([])
+        nombre_profesor.setEditable(True)
+
+        cantidad_horas = QSpinBox()
+
+        hbox.addWidget(nombre_ramo)
+        hbox.addWidget(nombre_profesor)
+        hbox.addWidget(cantidad_horas)
+
+        self.vbox.addLayout(hbox)
+
+
+
+
 def main(args):
     app = QApplication(args)
     dims = (100, 100, 1200, 900)
-    container = VentanaPrincipal(QRect(*dims))
+    container = VentanaHorario(QRect(*dims))
+    # container = CantidadModulos(QRect(*dims))
     # table = TableView(data, 9, 5)
     container.show()
     # container.addWidget(table)

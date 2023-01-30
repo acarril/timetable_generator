@@ -1,0 +1,143 @@
+\documentclass[letterpaper]{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lipsum}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{hyperref}
+
+\graphicspath{ {./figures/} }
+
+%\usepackage[pass]{geometry}
+\usepackage[left=1.25in,right=1.25in,top=1.0in,bottom=1.0in]{geometry}
+\usepackage{listings}
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.65}
+\definecolor{deepred}{rgb}{0.7,0,0}
+\definecolor{deepgreen}{rgb}{0,0.6,0}
+
+\newcommand{\mytitle}{Tarea 1}
+\newcommand{\myauthor}{Mariana Ortega}
+\newcommand{\mydate}{\today}
+
+\begin{document}
+
+\hfill
+\vspace{0pt}
+\hfill
+\vspace*{6cm}
+\begin{center}{}
+\vspace*{2mm}
+\vspace*{4mm}
+\hrule\vspace*{1pt}\hrule
+\vspace*{4mm}
+{\LARGE\bf Generador de horarios para colegios\\
+\vspace*{4mm}
+\vspace*{1mm}
+\end{center}
+
+\vspace*{50mm}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Explicación}
+El proyecto tiene como propósito modelar el problema de generación de horarios como un modelo de optimización, teniendo en cuenta las restricciones que puede tener un problema de este tipo y las que podría querer considerar un colegio al momento de hacer los horarios. Luego, se quiere generar un programa que permita a la persona que quiere generar su horario, personalizar este, imponiendo restricciones y viendo si estas se pueden cumplir. Para la interfaz se propondrán algunas ideas.
+
+\section{Modelamiento del problema}
+
+\subsection{Datos}
+\begin{itemize}
+    \item $dias$ \textbf{(D)}: Lista que muestra los días en los cuales se quieren planificar clases en un colegio. Generalmente será de lunes a viernes.
+    \item $modulos$ \textbf{(M)}: Lista que contiene todos los módulos de clases con los que cuenta el colegio.
+    \item $ramos\_con\_modulos\_seguidos$ \textbf{(RMS)}: Lista que contiene los nombres de los ramos que se quiere que tengan módulos consecutivos.
+    \item $combinaciones$ \textbf{(CMB)}: Lista que contiene listas de la forma $[i,j]$ que señala que entre el ramo $i$ y el ramo $j$ no hay ninguna pausa.
+    \item $horarios[curso][día]$ \textbf{(H)}: La primera llave es el curso. La segunda el día de la semana. Muestra la cantidad de módulos de clases que tiene cada curso en cada día de la semana.
+    \item $profesores\_por\_curso\,[curso]\,[cantidad]$ \textbf{(PpC)}: La primera llave es el curso y la segunda muestra si los cursos tienen uno o más alumnos. Así se obtiene una lista que contiene listas de la forma $[profesor,ramo]$.
+    \item $ramos\_por\_curso \, [curso] \, [ramos]$ \textbf{(RpC)}: La primera llave es el curso, la segunda es el nombre de cada ramo que tiene ese curso. Así se obtiene la cantidad de horas de clases que se tiene para cada ramo de cada curso. 
+    \item $carga\_profesores\,[profesor]\,[cantidad\_cursos\_simultáneos]$ \textbf{(CP)}: La primera llave es el nombre de cada profesor. La segunda llave es un ``1' o una ``M", dependiendo si el profesor hace la clase de forma solitaria o acompañado de otro profesor. Así se accede a una lista que contiene listas de la forma $[curso, ramo]$.
+    \item $multiples\_cursos$ \textbf{(MC)}: Lista que contiene listas de la forma $[lista\_cursos, profesor, ramo]$ que muestra qué profesores hacen algún ramo a más de un curso de forma simultánea.
+    \item $multiples\_profesores$ \textbf{(MP)}: Lista que contiene listas de la forma $[curso, lista\_profesores,ramo]$ que muestra qué ramos de qué cursos tienen más de un profesor.
+    \item $asignaciones$ \textbf{(A)}: Lista que contiene todas las tuplas de la forma curso, profesor, clase.
+    \item $ramos\_con\_modulos\_seguidos$ \textbf{(RMS)}: Lista de ramos que deben tener módulos seguidos.
+\end{itemize}
+
+\subsection{Variables}
+\begin{itemize}
+    \item $x_{cpkdj}$: Toma el valor $1$ si el curso $c$ tiene el ramo $k$ con el profesor $p$ el día $d$ en el módulo $j$ y $0$ en caso contrario.
+    \item $s_{cpkd}$: Toma el valor $1$ si el curso $c$ tiene el ramo $k$ con el profesor $p$ el día $d$ y $0$ en caso contrario.
+    \item $y_{pd}$: Toma el valor $1$ si el profesor $p$ hace clases el día $d$ y $0$ en caso contrario.
+\end{itemize}
+
+\subsection{Restricciones}
+
+\begin{enumerate}
+    \item Tiene que haber al menos un profesor haciéndole clases en cada módulo de clases para todos los cursos:
+    
+    $$\sum_{l \in PpC[c]} \, \sum_{p,k \in PpC[c][l]} x_{cpkdj} \geq 1 \; \forall c \in H, \forall d \in H[c], \forall j \in H[c][d]$$
+
+    \item Máximo un profesor al mismo tiempo para los cursos que solo tienen un profesor a la vez:
+
+    $$\sum_{p,k \in PpC[c][1]} x_{cpkdj} \leq 1 \; \forall c \in H, \forall d \in H[c], \forall j \in H[c][d]$$
+
+    \item Si más de un profesor hace una clase, entonces estos la hacen simultáneamente:
+    
+    $$x_{cp_1kdj} = x_{cp_2kdj} \; \forall c,PS,k \in MP, \forall p_1,p_2 \in PS, \forall d \in D, \forall j \in M$$
+
+    \item El horario incluye la cantidad de horas exacta que se quiere por ramo:
+    
+    $$\sum_{\forall d \in D} \sum_{\forall j \in M} x_{cpkdj} = RpC[c][k] \; \forall c \in PpC, \forall l \in PpC[c], \forall p,k \in PpC[c][l]$$
+
+    \item No se tiene clases en los módulos que no son parte del horario:
+
+    $$\sum_{l \in PpC[c]} \sum_{p,k \in PpC[c][l]} x_{cpkdj} = 0 \; \forall c \in H, \forall d \in H[c], \forall j \in M \setminus H[c][d]$$
+
+    \item Los profesores solo pueden hacerle clases simultáneamente a un curso, a menos que le hagan a múltiples cursos. En este último caso solo le puede hacer a cursos que efectivamente tengan clases juntos al mismo tiempo:
+
+    $$\sum_{c,k \in CP[p][q], c \neq c_2} x_{cpkdj} + x_{c_2pk_2dj} \leq q \; \forall CS,p_2,k_2 \in MP, \forall c_2 \in CS, \forall p \in P, \forall q \in CP[p], \forall d \in D, \forall j \in M, p = p_2$$
+
+    \item Misma restricción anterior, pero se relacionan todas las clases.
+    
+    $$\sum_{c,k \in CP[p][q]} x_{cpkdj} \leq q \; \forall p \in P, \forall q \in CP[p], \forall d \in D, \forall j \in M$$
+
+    \item Los cursos que se imparten juntos ocurren en el mismo módulo:
+
+    $$x_{c_1pkdj} = x_{c_2pkdj} \; \forall CS,p,k \in MC, \forall c_1,c_2 \in CS, \forall d \in D, \forall j \in M$$
+
+    \item Máximo de dos clases de un mismo ramo por día:
+
+    $$\sum_{j \in M} x_{cpkdj} \leq 2 \; \forall d \in D, \forall c \in H, \forall l \in PpC[c], \forall p,k \in PpC[c][l]$$
+
+    \item La misma clase solo puede ocurrir el mismo día si es en módulos consecutivos (esta podría ser una restricción adicional):
+
+    $$x_{cpkdj} + x_{cpkdz} \leq 1 \; \forall c,p,k \in A, \forall d \in D, \forall j,z \in \left((H \times H) \setminus CMB \right)$$
+
+    \item Introducción de la variable $s$ para preferir módulos dobles. También puede ser opcional:
+
+    $$M * s_{cpkd} \geq \sum_{j \in M} x_{cpkdj} \; \forall c,p,k \in A, \forall d \in D$$
+
+    \item Uso de la variable $s$ para forzar módulos dobles. Uso opcional:
+
+    $$\sum_{d \in D} s_{cpkd} \leq \left\lceil \frac{RpC}{2} \right\rceil \; \forall c \in H, \forall l \in PpC[c], \forall p,k \in Ppc[c][l], k \in RMS$$
+
+    \item Introducción de la variable $y$ para poner un tope a la cantidad de días que cada profesor debe hacer clases:
+
+    $$M * y_{pd} \geq \sum_{c,k \in CP[p][q]} s_{cpkd} \; \forall d \in D, \forall p \in CP, \forall q \in CP[p]$$
+
+    \item Uso de la variable $y$ para limitar la cantidad de días que un profesor hace clases:
+
+    $$\sum_{\for d \in D} \leq TD[p] \; \forall p \in CP$$
+\end{enumerate}
+
+\end{document}
+
