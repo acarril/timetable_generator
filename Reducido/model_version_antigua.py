@@ -1,8 +1,192 @@
-import json
-import requests
+import gurobipy as gp
+from gurobipy import GRB
+import math
 
-url = 'http://localhost:8000/test2'
-myobj = {
+def formar_asignaciones(profesores_por_curso: dict):
+    lista_asignaciones = []
+    for curso in profesores_por_curso:
+        for llave in profesores_por_curso[curso]:
+            for tupla in profesores_por_curso[curso][llave]:
+                lista_asignaciones.append((curso, tupla[0], tupla[1]))
+    return lista_asignaciones
+
+def formar_asignaciones_multiples(clase_conjunta):
+    lista_asignaciones_multiples = []
+    cantidad_cursos_simultaneos = {}
+    for cs,p,k in clase_conjunta:
+        for c in cs:
+            lista_asignaciones_multiples.append((c,p,k))
+            cantidad_cursos_simultaneos[c,p,k] = len(cs)
+    return lista_asignaciones_multiples, cantidad_cursos_simultaneos
+
+def formar_asignaciones_con_restriccion_modulos_diarios(ramos_con_modulos_seguidos: dict, asignaciones: list):
+    lista_modulos_seguidos = []
+    for curso in ramos_con_modulos_seguidos.keys():
+        for ramo in ramos_con_modulos_seguidos[curso]:
+            lista_modulos_seguidos.append((curso, ramo))
+    asignaciones_con_restriccion_de_modulos_diarios = []
+    for elem in asignaciones:
+        if (elem[0],elem[2]) in lista_modulos_seguidos:
+            asignaciones_con_restriccion_de_modulos_diarios.append(elem)
+    return asignaciones_con_restriccion_de_modulos_diarios
+
+def cantidad_maxima_de_dias(carga_profesores, ramos_por_curso):
+    tope_dias = {}
+    for profesor in carga_profesores:
+        suma = 0
+        for cantidad_cursos in carga_profesores[profesor]:
+            for curso,clase in carga_profesores[profesor][cantidad_cursos]:
+                suma += ramos_por_curso[curso][clase]['modulos_semanales'] * int(cantidad_cursos)
+            suma += int(len(carga_profesores[profesor][cantidad_cursos]) / int(cantidad_cursos))
+        if suma <= 3:
+            tope_dias[profesor] = 1
+        elif suma <= 6:
+            tope_dias[profesor] = 2
+        elif suma <= 9:
+            tope_dias[profesor] = 3
+        elif suma <= 12:
+            tope_dias[profesor] = 4
+    profesores_con_dias_limitados = []
+    for elem in tope_dias.keys():
+        profesores_con_dias_limitados.append(elem)
+    profesores_con_dias_limitados
+    
+    return tope_dias, profesores_con_dias_limitados
+
+def asignaciones_no_hechas(profesores_por_curso):
+    no_asignaciones = []
+    for curso in profesores_por_curso:
+        for elem in profesores_por_curso[curso]['0']:
+            no_asignaciones.append((curso, elem[0], elem[1]))
+    return no_asignaciones
+
+
+def armar_modelo(data):
+    model = gp.Model("Generación de horarios de colegio")
+    dias = data['dias']
+    modulos = data['modulos']
+    ramos_con_modulos_seguidos = data['ramos_con_modulos_seguidos']
+    horarios = data['horarios']
+    profesores_por_curso = data['profesores_por_curso']
+    ramos_por_curso = data['ramos_por_curso']
+    carga_profesores = data['carga_profesores']
+    profesores = list(carga_profesores.keys())
+    multiples_cursos = data['multiples_cursos']
+    multiples_profesores = data['multiples_profesores']
+    modulos_consecutivos = data['modulos_consecutivos']
+    asignaciones_vetadas = data['asignaciones_vetadas']
+    asignaciones_fijadas = data['asignaciones_fijadas']
+    combinaciones_vetadas = data['combinaciones_vetadas']
+    M = 10000
+    asignaciones_normales = formar_asignaciones(profesores_por_curso)
+    asignaciones_con_restriccion_de_modulos_diarios = formar_asignaciones_con_restriccion_modulos_diarios(
+        ramos_con_modulos_seguidos, asignaciones_normales
+    )
+    no_asignaciones = asignaciones_no_hechas(profesores_por_curso)
+    tope_dias, profesores_con_dias_limitados = cantidad_maxima_de_dias(carga_profesores, ramos_por_curso)
+
+
+    x = model.addVars(asignaciones_normales,dias,modulos,vtype=GRB.BINARY, name="x")
+    s = model.addVars(asignaciones_con_restriccion_de_modulos_diarios,dias,vtype=GRB.BINARY, name="s") # * Solo para los cursos donde se prefieren módulos dobles
+    y = model.addVars(profesores_con_dias_limitados,dias,vtype=GRB.BINARY,name="y")
+    t = model.addVars(no_asignaciones,name="t")
+
+    model.addConstrs((sum(x[c,p,k,d,j] for p,k in profesores_por_curso[c]['1']) <= 1 for c in horarios for d in horarios[c] for j in horarios[c][d]),name="R1")
+
+    for c in horarios:
+        if profesores_por_curso[c]['M'] != []:
+            model.addConstrs((sum(x[c,p,k,d,j] for p,k in (profesores_por_curso[c]['1'] + profesores_por_curso[c]['M'])) >= 1 for d in horarios[c] for j in horarios[c][d]),name="R1b")
+
+    for c,ps,k in multiples_profesores:
+        model.addConstrs((x[c,p1,k,d,j] - x[c,p2,k,d,j] == 0
+        for p1,p2 in [(ps[a],ps[b]) for a in range(len(ps)) for b in range(len(ps)) if a < b]
+        for d in dias for j in modulos),name="R3")
+
+    model.addConstrs((sum(x[c,p,k,d,j] for d in dias for j in modulos) == ramos_por_curso[c][k]['modulos_semanales'] \
+        for c in profesores_por_curso for l in profesores_por_curso[c] for p,k in profesores_por_curso[c][l]),name="R4")
+
+    model.addConstrs((sum(x[c,p,k,d,j] for l in profesores_por_curso[c] for p,k in profesores_por_curso[c][l]) == 0 \
+        for c in horarios for d in horarios[c] for j in list(set(modulos) - set(horarios[c][d]))),name="R5")
+
+    for cs,p2,k2 in multiples_cursos :
+        model.addConstrs((sum(x[c,p,k,d,j] for c,k in carga_profesores[p][q] if c != c2) + \
+            x[c2,p,k2,d,j] <= int(q) \
+            for c2 in [cs[a] for a in range(len(cs)) for b in range(len(cs)) if a < b]
+            for p in list(carga_profesores.keys()) for q in carga_profesores[p] for d in dias for j in modulos if p == p2),name="R6")
+
+    model.addConstrs((sum(x[c,p,k,d,j] for c,k in carga_profesores[p][q]) <= int(q) \
+        for p in list(carga_profesores.keys()) for q in carga_profesores[p] for d in dias for j in modulos),name="R7")
+
+    for cs,p,k in multiples_cursos :
+        model.addConstrs((x[c1,p,k,d,j] - x[c2,p,k,d,j] == 0 \
+            for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b]
+            for d in dias for j in modulos),name="R8")
+        
+    model.addConstrs((sum(x[c,p,k,d,j] for j in modulos) <= ramos_por_curso[c][k]['maximo_modulos_diarios'] for d in dias for c in horarios 
+    for l in profesores_por_curso[c] for p,k in profesores_por_curso[c][l]),name="R9")
+
+    model.addConstrs((x[c,p,k,d,j] + x[c,p,k,d,z] <= 1 for c,p,k in asignaciones_normales for d in dias \
+        for j,z in list(set([(a,b) for a in horarios[c][d] for b in horarios[c][d] if a < b]) - set([tuple(comb) for comb in modulos_consecutivos]))),name="R10")
+
+    model.addConstrs((M * s[c,p,k,d] >= sum(x[c,p,k,d,j] for j in modulos) for c,p,k in asignaciones_con_restriccion_de_modulos_diarios for d in dias),name="R11")
+
+    model.addConstrs((sum(s[c,p,k,d] for d in dias) <= math.ceil(ramos_por_curso[c][k]['modulos_semanales'] / 2) \
+        for c in horarios for l in profesores_por_curso[c] for p,k in profesores_por_curso[c][l] if k in ramos_con_modulos_seguidos[c]),name="R12")
+
+    model.addConstrs((M * y[p,d] >= sum(x[c,p,k,d,j] for c,k in carga_profesores[p][q] for j in modulos) \
+        for d in dias for p in profesores_con_dias_limitados for q in carga_profesores[p]),name="R13")
+
+    model.addConstrs((sum(y[p,d] for d in dias) <= tope_dias[p] for p in profesores_con_dias_limitados),name="R14")
+    
+    model.addConstrs((x[c,p,k,d,j] == 0 for c,p,k,d,j in asignaciones_vetadas),name="R15")
+
+    model.addConstrs((x[c,p,k,d,j] == 1 for c,p,k,d,j in asignaciones_fijadas),name="R16")
+
+    model.addConstrs((x[c,p1,k1,d,j] + x[c,p2,k2,d,z] <= 1 for c,p1,p2,k1,k2 in combinaciones_vetadas for d in dias for j,z in modulos_consecutivos),name="R17")
+
+    for c in horarios:
+        if profesores_por_curso[c]['0'] != []:
+            model.addConstrs((sum(x[c,p,k,d,j] for k in profesores_por_curso[c]['0'] for p in profesores_por_curso[c]['0'][k]) == 1 \
+                for d in horarios[c] for j in horarios[c][d]),name="R18")
+
+    model.addConstrs((M * t[c,p,k] >= sum(x[c,p,k,d,j] for d in horarios[c] for j in horarios[c][d]) \
+        for c in horarios for k in profesores_por_curso[c]['0'] for p in profesores_por_curso[c]['0'][k]),name="R19")
+
+    model.addConstrs((sum(t[c,p,k] for p in profesores_por_curso[c]['0'][k]) == 1 \
+        for c in horarios for k in profesores_por_curso[c]['0'] ),name="R20")
+
+    obj = sum(x[c,p,k,d,j] + x[c2,p2,k2,d,z] for c,p,k in asignaciones_normales for c2,p2,k2 in asignaciones_normales for d in dias for j,z in modulos_consecutivos
+    if p == p2 and c == c2)
+    model.setObjective(obj, GRB.MINIMIZE)
+
+    model.write('model.lp')
+    model.setParam("PoolSolutions", 10)
+    model.setParam('PoolSearchMode', 2)
+    model.setParam('OutputFlag', 1)
+    model.update()
+
+    model.computeIIS()
+    removed =[]
+    for c in model.getConstrs():
+        if c.IISConstr:
+            print('%s' % c.constrName)
+            # Remove a single constraint from the model
+            removed.append(str(c.constrName))
+            model.remove(c)
+    model.optimize()
+    # for i in range(model.SolCount):
+    #     model.setParam("SolutionNumber", i)
+    #     model.update()
+
+    #     print(model.optimize())
+    #     model.write(f"solutions/out{i+1}.sol")
+
+
+if __name__ == '__main__':
+    import json
+    f = open('Reducido/parametros4.json', encoding='utf8')
+    data = json.load(f)
+    data = {
     "dias": [
         "Lunes","Martes","Miercoles","Jueves","Viernes"
     ],
@@ -404,7 +588,7 @@ myobj = {
     },
     "profesores_por_curso": {
         "1A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Eieyagjc",
@@ -458,7 +642,7 @@ myobj = {
             "M": []
         },
         "1B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Gksjyzam",
@@ -512,7 +696,7 @@ myobj = {
             "M": []
         },
         "1C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Artfsbvj",
@@ -566,7 +750,7 @@ myobj = {
             "M": []
         },
         "1D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Zpijftra",
@@ -620,7 +804,7 @@ myobj = {
             "M": []
         },
         "2A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Dlrlhevn",
@@ -674,7 +858,7 @@ myobj = {
             "M": []
         },
         "2B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Cjntorhr",
@@ -728,7 +912,7 @@ myobj = {
             "M": []
         },
         "2C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Cjntorhr",
@@ -782,7 +966,7 @@ myobj = {
             "M": []
         },
         "2D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Fkkvumii",
@@ -836,7 +1020,7 @@ myobj = {
             "M": []
         },
         "3A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Vkmfgwym",
@@ -890,7 +1074,7 @@ myobj = {
             "M": []
         },
         "3B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Jjjbjxan",
@@ -944,7 +1128,7 @@ myobj = {
             "M": []
         },
         "3C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Mfrsyvvt",
@@ -998,7 +1182,7 @@ myobj = {
             "M": []
         },
         "3D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Pwekysoi",
@@ -1052,7 +1236,7 @@ myobj = {
             "M": []
         },
         "4A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Zjszbjef",
@@ -1106,7 +1290,7 @@ myobj = {
             "M": []
         },
         "4B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Skzvkdfn",
@@ -1160,7 +1344,7 @@ myobj = {
             "M": []
         },
         "4C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Xwmgnbka",
@@ -1214,7 +1398,7 @@ myobj = {
             "M": []
         },
         "4D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Pxymekhf",
@@ -1268,7 +1452,7 @@ myobj = {
             "M": []
         },
         "5A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Ukpzxoex",
@@ -1326,7 +1510,7 @@ myobj = {
             "M": []
         },
         "5B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Hgcsbhrt",
@@ -1384,7 +1568,7 @@ myobj = {
             "M": []
         },
         "5C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Wywsbftg",
@@ -1442,7 +1626,7 @@ myobj = {
             "M": []
         },
         "5D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Zxozenmu",
@@ -1500,7 +1684,7 @@ myobj = {
             "M": []
         },
         "6A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Vccyqwgt",
@@ -1554,7 +1738,7 @@ myobj = {
             "M": []
         },
         "6B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Onyodhku",
@@ -1608,7 +1792,7 @@ myobj = {
             "M": []
         },
         "6C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Ilcmctde",
@@ -1662,7 +1846,7 @@ myobj = {
             "M": []
         },
         "6D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Ktalejxl",
@@ -1716,7 +1900,7 @@ myobj = {
             "M": []
         },
         "7A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Eieyagjc",
@@ -1774,7 +1958,7 @@ myobj = {
             "M": []
         },
         "7B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Yycaxjta",
@@ -1832,7 +2016,7 @@ myobj = {
             "M": []
         },
         "7C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Skzvkdfn",
@@ -1890,7 +2074,7 @@ myobj = {
             "M": []
         },
         "7D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Txhbhqio",
@@ -1948,7 +2132,7 @@ myobj = {
             "M": []
         },
         "8A": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Jjjbjxan",
@@ -2006,7 +2190,7 @@ myobj = {
             "M": []
         },
         "8B": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Dtqrwfpf",
@@ -2064,7 +2248,7 @@ myobj = {
             "M": []
         },
         "8C": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Jumijrpx",
@@ -2122,7 +2306,7 @@ myobj = {
             "M": []
         },
         "8D": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Dlrlhevn",
@@ -2180,7 +2364,7 @@ myobj = {
             "M": []
         },
         "IA": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Vokwrssi",
@@ -2238,7 +2422,7 @@ myobj = {
             "M": []
         },
         "IB": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Ylbruxtg",
@@ -2296,7 +2480,7 @@ myobj = {
             "M": []
         },
         "IC": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Qmxargmc",
@@ -2354,7 +2538,7 @@ myobj = {
             "M": []
         },
         "ID": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Mlvafpyt",
@@ -2412,7 +2596,7 @@ myobj = {
             "M": []
         },
         "IIA": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Mjelvrnp",
@@ -2470,7 +2654,7 @@ myobj = {
             "M": []
         },
         "IIB": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Bjczvdlx",
@@ -2528,7 +2712,7 @@ myobj = {
             "M": []
         },
         "IIC": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Izhnrdcv",
@@ -2586,7 +2770,7 @@ myobj = {
             "M": []
         },
         "IID": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Pfqfrspa",
@@ -2644,7 +2828,7 @@ myobj = {
             "M": []
         },
         "IIIA": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Wumylfsy",
@@ -2706,7 +2890,7 @@ myobj = {
             "M": []
         },
         "IIIB": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Xrgtkdbt",
@@ -2768,7 +2952,7 @@ myobj = {
             "M": []
         },
         "IIIC": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Yicoxcly",
@@ -2830,7 +3014,7 @@ myobj = {
             "M": []
         },
         "IIID": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Ukpzxoex",
@@ -2892,7 +3076,7 @@ myobj = {
             "M": []
         },
         "IVA": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Yiqzsxsm",
@@ -2954,7 +3138,7 @@ myobj = {
             "M": []
         },
         "IVB": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Mlvafpyt",
@@ -3016,7 +3200,7 @@ myobj = {
             "M": []
         },
         "IVC": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Izhnrdcv",
@@ -3078,7 +3262,7 @@ myobj = {
             "M": []
         },
         "IVD": {
-            "0": {},
+            "0": [],
             "1": [
                 [
                     "Ncnqafso",
@@ -8632,23 +8816,4 @@ myobj = {
         
     ]
 }
-
-x = requests.post(url, json = myobj)
-final = x.text
-
-final = final.replace('\\u00e1', 'á')
-final = final.replace('\\u00e9', 'é')
-final = final.replace('\\u00ed', 'í')
-final = final.replace('\\u00f3', 'ó')
-final = final.replace('\\u00fa', 'ú')
-final = final.replace('\\u00c1', 'Á')
-final = final.replace('\\u00c9', 'É')
-final = final.replace('\\u00cd', 'Í')
-final = final.replace('\\u00d3', 'Ó')
-final = final.replace('\\u00da', 'Ú')
-final = final.replace('\\u00f1', 'ñ')
-final = final.replace('\\u00d1', 'Ñ')
-
-print(final)
-res = json.loads(final)
-print(res)
+    armar_modelo(data)
