@@ -1,0 +1,1545 @@
+{
+    "dias": [
+        "Lunes","Martes","Miércoles","Jueves","Viernes"
+    ],
+    "modulos": [
+        1,2,3,4,5,6,7,8,9,10,11
+    ],
+    "ramos_con_modulos_seguidos": {
+        "1A": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales", "Tutoría2"
+        ],
+        "1B": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales", "Tutoría2"
+        ],
+        "2A": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales"
+        ],
+        "2B": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales"
+        ],
+        "3A": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales"
+        ],
+        "3B": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales"
+        ],
+        "4A": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales"
+        ],
+        "4B": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales"
+        ],
+        "5A": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés1", "Inglés2", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales/Tecnología"
+        ],
+        "5B": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés1", "Inglés2", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales/Tecnología"
+        ],
+        "6A": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés1", "Inglés2", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales/Tecnología"
+        ],
+        "6B": [
+            "Matemática", "Ciencias_Naturales", "Música", "Inglés1", "Inglés2", "Tutoría1", "Educación_Física_y_Salud", "Lenguaje_y_Comunicación", "Historia,_Geografía_y_CS", "Crecer_y_Crecer/Religión", "Artes_Visuales/Tecnología"
+        ]
+    },
+    "ramos_con_modulos_disjuntos": {
+        "1A": [],
+        "1B": [],
+        "2A": [],
+        "2B": [],
+        "3A": [],
+        "3B": [],
+        "4A": [],
+        "4B": [],
+        "5A": [],
+        "5B": [],
+        "6A": [],
+        "6B": []
+    },
+    "modulos_consecutivos": [
+        [1,2],
+        [3,4],
+        [5,6],
+        [7,8],
+        [9,10]
+    ],
+    "horarios": {
+        "1A": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8,9],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "1B": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8,9],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "2A": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "2B": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9],
+            "Jueves": [1,2,3,4,5,6,7,8,9],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "3A": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "3B": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "4A": {
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8,9,10],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "4B": {
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8,9,10],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "5A": {
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8,9,10],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "5B": {
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miércoles": [1,2,3,4,5,6,7,8],
+            "Jueves": [1,2,3,4,5,6,7,8,9,10],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "6A": {
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8,9],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "6B": {
+            "Lunes": [1,2,3,4,5,6,7,8],
+            "Martes": [1,2,3,4,5,6,7,8],
+            "Miércoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8,9],
+            "Viernes": [1,2,3,4,5,6]
+        }
+    },
+    "limitaciones_profesores": {
+        "Camila_Sutar": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Roxana_Castillo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Patricio_Vidal": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Paulina_Correa": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Andrea_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Diego_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "María_José_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Víctor_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Viviana_Villalobos": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Vanessa_Trejo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Mariela_Castro": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Sara_Adaros": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Cecilia_Labarca": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Juan_Morales": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Karla_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Laura_Mondaca": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Nicole_Jofré": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Ramiro_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Joaquina_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Erika_Albornoz": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Cristian_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Karen_Olivera": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Iván_Aguayo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Patricio_Santibañez": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "María_Paz_Videla": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Erik_X": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Sara_Sánchez": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Claudia_Astudillo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Marcela_Bravo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Tamara_Olivares": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Valeria_Videla": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Luis_Reyes": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Antonio_Zuleta": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Jessica_Díaz": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Mauricio_Morales": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        }
+    },
+    "carga_profesores": {
+        "Camila_Sutar": {
+            "1": [
+                ["1A", "Matemática"],
+                ["1A", "Ciencias_Naturales"],
+                ["1A", "Inglés"],
+                ["1A", "Historia,_Geografía_y_CS"],
+                ["1A", "Tecnología"],
+                ["1A", "Tutoría2"],
+                ["1A", "Artes_Visuales"],
+                ["1A", "Orientación"]
+            ]
+        },
+        "Roxana_Castillo": {
+            "1": [
+                ["1A", "Lenguaje_y_Comunicación"],
+                ["2B", "Lenguaje_y_Comunicación"],
+                ["3A", "Lenguaje_y_Comunicación"]
+            ]
+        },
+        "Patricio_Vidal": {
+            "1": [
+                ["1A", "Música"],
+                ["1B", "Música"],
+                ["2A", "Música"],
+                ["2B", "Música"],
+                ["3B", "Música"],
+                ["3B", "Música"],
+                ["4A", "Música"],
+                ["4B", "Música"],
+                ["5A", "Música"]
+            ],
+            "2": [
+                ["4A", "Música"]
+            ]
+        },
+        "Paulina_Correa": {
+            "1": [
+                ["1A", "Tutoría1"]
+            ]
+        },
+        "Andrea_X": {
+            "2": [
+                ["1A", "Educación_Física_y_Salud"],
+                ["1B", "Educación_Física_y_Salud"],
+                ["2A", "Educación_Física_y_Salud"],
+                ["2B", "Educación_Física_y_Salud"]
+            ]
+        },
+        "Diego_X": {
+            "2": [
+                ["1A", "Educación_Física_y_Salud"],
+                ["1B", "Educación_Física_y_Salud"],
+                ["2A", "Educación_Física_y_Salud"],
+                ["2B", "Educación_Física_y_Salud"],
+                ["3A", "Educación_Física_y_Salud"],
+                ["3B", "Educación_Física_y_Salud"],
+                ["4A", "Educación_Física_y_Salud"],
+                ["4B", "Educación_Física_y_Salud"],
+                ["6A", "Educación_Física_y_Salud"],
+                ["6B", "Educación_Física_y_Salud"]
+            ]
+        },
+        "María_José_X": {
+            "2": [
+                ["1A", "Crecer_y_Crecer/Religión"],
+                ["1B", "Crecer_y_Crecer/Religión"],
+                ["2A", "Crecer_y_Crecer/Religión"],
+                ["2B", "Crecer_y_Crecer/Religión"],
+                ["3A", "Crecer_y_Crecer/Religión"],
+                ["3B", "Crecer_y_Crecer/Religión"],
+                ["4A", "Crecer_y_Crecer/Religión"],
+                ["4B", "Crecer_y_Crecer/Religión"],
+                ["5A", "Crecer_y_Crecer/Religión"],
+                ["5B", "Crecer_y_Crecer/Religión"],
+                ["6A", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "Víctor_X": {
+            "2": [
+                ["1A", "Crecer_y_Crecer/Religión"],
+                ["1B", "Crecer_y_Crecer/Religión"],
+                ["2A", "Crecer_y_Crecer/Religión"],
+                ["2B", "Crecer_y_Crecer/Religión"],
+                ["3A", "Crecer_y_Crecer/Religión"],
+                ["3B", "Crecer_y_Crecer/Religión"],
+                ["4A", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "Viviana_Villalobos": {
+            "1": [
+                ["1B", "Lenguaje_y_Comunicación"],
+                ["1B", "Tutoría1"],
+                ["2A", "Lenguaje_y_Comunicación"],
+                ["2A", "Tutoría2"],
+                ["2B", "Tutoría2"],
+                ["3B", "Lenguaje_y_Comunicación"]
+            ]
+        },
+        "Vanessa_Trejo": {
+            "1": [
+                ["1B", "Matemática"],
+                ["1B", "Ciencias_Naturales"],
+                ["1B", "Inglés"],
+                ["1B", "Historia,_Geografía_y_CS"],
+                ["1B", "Tecnología"],
+                ["1B", "Tutoría2"],
+                ["1B", "Artes_Visuales"],
+                ["1B", "Orientación"]
+            ]
+        },
+        "Mariela_Castro": {
+            "1": [
+                ["2A", "Matemática"],
+                ["2A", "Ciencias_Naturales"],
+                ["2A", "Inglés"],
+                ["2A", "Historia,_Geografía_y_CS"],
+                ["2A", "Tecnología"],
+                ["2A", "Tutoría1"],
+                ["2A", "Artes_Visuales"],
+                ["2A", "Orientación"]
+            ]
+        },
+        "Sara_Adaros": {
+            "1": [
+                ["2B", "Matemática"],
+                ["2B", "Ciencias_Naturales"],
+                ["2B", "Inglés"],
+                ["2B", "Historia,_Geografía_y_CS"],
+                ["2B", "Tecnología"],
+                ["2B", "Artes_Visuales"],
+                ["2B", "Orientación"],
+                ["3B", "Artes_Visuales"],
+                ["4B", "Artes_Visuales"]
+            ]
+        },
+        "Cecilia_Labarca": {
+            "1": [
+                ["2B", "Tutoría1"],
+                ["3B", "Matemática"],
+                ["3B", "Ciencias_Naturales"],
+                ["3B", "Inglés"],
+                ["3B", "Historia,_Geografía_y_CS"],
+                ["3B", "Orientación"],
+                ["3B", "Tutoría"],
+                ["5B", "Matemática"]
+            ]
+        },
+        "Juan_Morales": {
+            "1": [
+                ["3A", "Matemática"],
+                ["3A", "Ciencias_Naturales"],
+                ["3A", "Inglés"],
+                ["3A", "Historia,_Geografía_y_CS"],
+                ["3A", "Tecnología"],
+                ["3A", "Artes_Visuales"],
+                ["3A", "Orientación"],
+                ["3A", "Tutoría"],
+                ["3B", "Tecnología"]
+            ]
+        },
+        "Karla_X": {
+            "2": [
+                ["3A", "Educación_Física_y_Salud"],
+                ["3B", "Educación_Física_y_Salud"]
+            ]
+        },
+        "Laura_Mondaca": {
+            "1": [
+                ["4A", "Matemática"],
+                ["4A", "Ciencias_Naturales"],
+                ["4A", "Inglés"],
+                ["4A", "Historia,_Geografía_y_CS"],
+                ["4A", "Tecnología"],
+                ["4A", "Artes_Visuales"],
+                ["4A", "Orientación"],
+                ["4A", "Tutoría"],
+                ["4B", "Tecnología"],
+                ["4B", "Tutoría"]
+            ]
+        },
+        "Nicole_Jofré": {
+            "1": [
+                ["4A", "Lenguaje_y_Comunicación"],
+                ["5A", "Lenguaje_y_Comunicación"]
+            ]
+        },
+        "Ramiro_X": {
+            "2": [
+                ["4A", "Música"],
+                ["4B", "Música"],
+                ["5A", "Música"],
+                ["5B", "Música"]
+            ]
+        },
+        "Joaquina_X": {
+            "2": [
+                ["4A", "Educación_Física_y_Salud"],
+                ["4B", "Educación_Física_y_Salud"],
+                ["5A", "Educación_Física_y_Salud"],
+                ["5B", "Educación_Física_y_Salud"],
+                ["6A", "Educación_Física_y_Salud"]
+            ]
+        },
+        "Erika_Albornoz": {
+            "1": [
+                ["4B", "Matemática"],
+                ["4B", "Ciencias_Naturales"],
+                ["4B", "Inglés"],
+                ["4B", "Historia,_Geografía_y_CS"],
+                ["4B", "Orientación"]
+            ],
+            "2": [
+                ["5A", "Matemática"]
+            ]
+        },
+        "Cristian_X": {
+            "2": [
+                ["4B", "Crecer_y_Crecer/Religión"],
+                ["5A", "Crecer_y_Crecer/Religión"],
+                ["5B", "Crecer_y_Crecer/Religión"],
+                ["6A", "Crecer_y_Crecer/Religión"],
+                ["6B", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "Karen_Olivera": {
+            "1": [
+                ["4B", "Lenguaje_y_Comunicación"],
+                ["5B", "Lenguaje_y_Comunicación"],
+                ["6B", "Lenguaje_y_Comunicación"]
+            ]
+        },
+        "Iván_Aguayo": {
+            "1": [
+                ["5A", "Inglés1"],
+                ["6A", "Inglés1"],
+                ["6A", "Orientación"]
+            ]
+        },
+        "Patricio_Santibañez": {
+            "1": [
+                ["5A", "Historia,_Geografía_y_CS"],
+                ["5B", "Historia,_Geografía_y_CS"],
+                ["6B", "Historia,_Geografía_y_CS"],
+                ["6B", "Orientación"]
+            ],
+            "2": [
+                ["6B", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "María_Paz_Videla": {
+            "1": [
+                ["5A", "Tutoría"],
+                ["5B", "Inglés1"],
+                ["5B", "Tutoría"],
+                ["5B", "Orientación"],
+                ["6A", "Tutoría"],
+                ["6B", "Inglés1"],
+                ["6B", "Tutoría"]
+            ]
+        },
+        "Erik_X": {
+            "2": [
+                ["5A", "Educación_Física_y_Salud"],
+                ["5B", "Educación_Física_y_Salud"]
+            ]
+        },
+        "Sara_Sánchez": {
+            "1": [
+                ["5A", "Orientación"],
+                ["5A", "Artes_Visuales/Tecnología"],
+                ["5B", "Artes_Visuales/Tecnología"],
+                ["6A", "Artes_Visuales/Tecnología"],
+                ["6B", "Artes_Visuales/Tecnología"]
+            ]
+        },
+        "Claudia_Astudillo": {
+            "1": [
+                ["5A", "Inglés2"],
+                ["5B", "Inglés2"],
+                ["6A", "Inglés2"],
+                ["6B", "Inglés2"]
+            ]
+        },
+        "Marcela_Bravo": {
+            "1": [
+                ["5A", "Ciencias_Naturales"],
+                ["6B", "Ciencias_Naturales"]
+            ]
+        },
+        "Tamara_Olivares": {
+            "1":[
+                ["5B", "Ciencias_Naturales"],
+                ["6A", "Ciencias_Naturales"]
+            ]
+        },
+        "Valeria_Videla": {
+            "1": [
+                ["6A", "Lenguaje_y_Comunicación"]
+            ]
+        },
+        "Luis_Reyes": {
+            "1": [
+                ["6A", "Historia,_Geografía_y_CS"]
+            ]
+        },
+        "Antonio_Zuleta": {
+            "1": [
+                ["6A", "Matemática"]
+            ]
+        },
+        "Jessica_Díaz": {
+            "2": [
+                ["5A", "Matemática"],
+                ["6B", "Matemática"]
+            ]
+        },
+        "Mauricio_Morales": {
+            "1": [
+                ["6A", "Música"],
+                ["6B", "Música"]
+            ]
+        }
+    },
+    "profesores_por_curso": {
+        "1A": {
+            "0": {},
+            "1": [
+                ["Camila_Sutar", "Matemática"],
+                ["Camila_Sutar", "Ciencias_Naturales"],
+                ["Patricio_Vidal", "Música"],
+                ["Camila_Sutar", "Inglés"],
+                ["Paulina_Correa", "Tutoría1"],
+                ["Roxana_Castillo", "Lenguaje_y_Comunicación"],
+                ["Camila_Sutar", "Historia,_Geografía_y_CS"],
+                ["Camila_Sutar", "Tecnología"],
+                ["Camila_Sutar", "Tutoría2"],
+                ["Camila_Sutar", "Artes_Visuales"],
+                ["Camila_Sutar", "Orientación"]
+            ],
+            "M": [
+                ["Andrea_X", "Educación_Física_y_Salud"],
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "1B": {
+            "0": {},
+            "1": [
+                ["Viviana_Villalobos", "Lenguaje_y_Comunicación"],
+                ["Vanessa_Trejo", "Ciencias_Naturales"],
+                ["Vanessa_Trejo", "Inglés"],
+                ["Vanessa_Trejo", "Orientación"],
+                ["Vanessa_Trejo", "Matemática"],
+                ["Viviana_Villalobos", "Tutoría1"],
+                ["Vanessa_Trejo", "Tutoría2"],
+                ["Patricio_Vidal", "Música"],
+                ["Vanessa_Trejo", "Artes_Visuales"],
+                ["Vanessa_Trejo", "Historia,_Geografía_y_CS"],
+                ["Vanessa_Trejo", "Tecnología"]
+            ],
+            "M": [
+                ["Andrea_X", "Educación_Física_y_Salud"],
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "2A": {
+            "0": {},
+            "1": [
+                ["Mariela_Castro", "Matemática"],
+                ["Mariela_Castro", "Ciencias_Naturales"],
+                ["Viviana_Villalobos", "Lenguaje_y_Comunicación"],
+                ["Mariela_Castro", "Inglés"],
+                ["Mariela_Castro", "Tutoría1"],
+                ["Mariela_Castro", "Historia,_Geografía_y_CS"],
+                ["Mariela_Castro", "Tecnología"],
+                ["Mariela_Castro", "Orientación"],
+                ["Mariela_Castro", "Artes_Visuales"],
+                ["Viviana_Villalobos", "Tutoría2"],
+                ["Patricio_Vidal", "Música"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Andrea_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "2B": {
+            "0": {},
+            "1": [
+                ["Sara_Adaros", "Matemática"],
+                ["Sara_Adaros", "Historia,_Geografía_y_CS"],
+                ["Roxana_Castillo", "Lenguaje_y_Comunicación"],
+                ["Sara_Adaros", "Ciencias_Naturales"],
+                ["Sara_Adaros", "Inglés"],
+                ["Cecilia_Labarca", "Tutoría1"],
+                ["Patricio_Vidal", "Música"],
+                ["Sara_Adaros", "Orientación"],
+                ["Sara_Adaros", "Tecnología"],
+                ["Sara_Adaros", "Artes_Visuales"],
+                ["Viviana_Villalobos", "Tutoría2"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Andrea_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "3A": {
+            "0": {},
+            "1": [
+                ["Juan_Morales", "Matemática"],
+                ["Juan_Morales", "Historia,_Geografía_y_CS"],
+                ["Roxana_Castillo", "Lenguaje_y_Comunicación"],
+                ["Juan_Morales", "Ciencias_Naturales"],
+                ["Juan_Morales", "Inglés"],
+                ["Juan_Morales", "Tutoría"],
+                ["Patricio_Vidal", "Música"],
+                ["Juan_Morales", "Orientación"],
+                ["Juan_Morales", "Tecnología"],
+                ["Juan_Morales", "Artes_Visuales"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Karla_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "3B": {
+            "0": {},
+            "1": [
+                ["Cecilia_Labarca", "Matemática"],
+                ["Cecilia_Labarca", "Historia,_Geografía_y_CS"],
+                ["Viviana_Villalobos", "Lenguaje_y_Comunicación"],
+                ["Cecilia_Labarca", "Ciencias_Naturales"],
+                ["Cecilia_Labarca", "Inglés"],
+                ["Cecilia_Labarca", "Tutoría"],
+                ["Patricio_Vidal", "Música"],
+                ["Cecilia_Labarca", "Orientación"],
+                ["Juan_Morales", "Tecnología"],
+                ["Sara_Adaros", "Artes_Visuales"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Karla_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "4A": {
+            "0": {},
+            "1": [
+                ["Laura_Mondaca", "Matemática"],
+                ["Laura_Mondaca", "Historia,_Geografía_y_CS"],
+                ["Nicole_Jofré", "Lenguaje_y_Comunicación"],
+                ["Laura_Mondaca", "Ciencias_Naturales"],
+                ["Laura_Mondaca", "Inglés"],
+                ["Laura_Mondaca", "Tutoría"],
+                ["Laura_Mondaca", "Orientación"],
+                ["Laura_Mondaca", "Tecnología"],
+                ["Laura_Mondaca", "Artes_Visuales"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Joaquina_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Víctor_X", "Crecer_y_Crecer/Religión"],
+                ["Patricio_Vidal", "Música"],
+                ["Ramiro_X", "Música"]
+            ]
+        },
+        "4B": {
+            "0": {},
+            "1": [
+                ["Erika_Albornoz", "Matemática"],
+                ["Erika_Albornoz", "Historia,_Geografía_y_CS"],
+                ["Karen_Olivera", "Lenguaje_y_Comunicación"],
+                ["Erika_Albornoz", "Ciencias_Naturales"],
+                ["Erika_Albornoz", "Inglés"],
+                ["Laura_Mondaca", "Tutoría"],
+                ["Erika_Albornoz", "Orientación"],
+                ["Laura_Mondaca", "Tecnología"],
+                ["Sara_Adaros", "Artes_Visuales"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Joaquina_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Cristian_X", "Crecer_y_Crecer/Religión"],
+                ["Patricio_Vidal", "Música"],
+                ["Ramiro_X", "Música"]
+            ]
+        },
+        "5A": {
+            "0": {},
+            "1": [
+                ["Patricio_Santibañez", "Historia,_Geografía_y_CS"],
+                ["Nicole_Jofré", "Lenguaje_y_Comunicación"],
+                ["Marcela_Bravo", "Ciencias_Naturales"],
+                ["Iván_Aguayo", "Inglés1"],
+                ["Claudia_Astudillo", "Inglés2"],
+                ["María_Paz_Videla", "Tutoría"],
+                ["Sara_Sánchez", "Orientación"],
+                ["Sara_Sánchez", "Artes_Visuales/Tecnología"]
+            ],
+            "M": [
+                ["Erik_X", "Educación_Física_y_Salud"],
+                ["Joaquina_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Cristian_X", "Crecer_y_Crecer/Religión"],
+                ["Patricio_Vidal", "Música"],
+                ["Ramiro_X", "Música"],
+                ["Erika_Albornoz", "Matemática"],
+                ["Jessica_Díaz", "Matemática"]
+            ]
+        },
+        "5B": {
+            "0": {},
+            "1": [
+                ["Cecilia_Labarca", "Matemática"],
+                ["Patricio_Santibañez", "Historia,_Geografía_y_CS"],
+                ["Karen_Olivera", "Lenguaje_y_Comunicación"],
+                ["Tamara_Olivares", "Ciencias_Naturales"],
+                ["María_Paz_Videla", "Inglés1"],
+                ["Claudia_Astudillo", "Inglés2"],
+                ["María_Paz_Videla", "Tutoría"],
+                ["María_Paz_Videla", "Orientación"],
+                ["Sara_Sánchez", "Artes_Visuales/Tecnología"]
+            ],
+            "M": [
+                ["Erik_X", "Educación_Física_y_Salud"],
+                ["Joaquina_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Cristian_X", "Crecer_y_Crecer/Religión"],
+                ["Patricio_Vidal", "Música"],
+                ["Ramiro_X", "Música"]
+            ]
+        },
+        "6A": {
+            "0": {},
+            "1": [
+                ["Antonio_Zuleta", "Matemática"],
+                ["Luis_Reyes", "Historia,_Geografía_y_CS"],
+                ["Valeria_Videla", "Lenguaje_y_Comunicación"],
+                ["Tamara_Olivares", "Ciencias_Naturales"],
+                ["Iván_Aguayo", "Inglés1"],
+                ["Claudia_Astudillo", "Inglés2"],
+                ["María_Paz_Videla", "Tutoría"],
+                ["Iván_Aguayo", "Orientación"],
+                ["Sara_Sánchez", "Artes_Visuales/Tecnología"],
+                ["Mauricio_Morales", "Música"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Joaquina_X", "Educación_Física_y_Salud"],
+                ["María_José_X", "Crecer_y_Crecer/Religión"],
+                ["Cristian_X", "Crecer_y_Crecer/Religión"]
+            ]
+        },
+        "6B": {
+            "0": {},
+            "1": [
+                ["Jessica_Díaz", "Matemática"],
+                ["Patricio_Santibañez", "Historia,_Geografía_y_CS"],
+                ["Karen_Olivera", "Lenguaje_y_Comunicación"],
+                ["Marcela_Bravo", "Ciencias_Naturales"],
+                ["María_Paz_Videla", "Inglés1"],
+                ["Claudia_Astudillo", "Inglés2"],
+                ["María_Paz_Videla", "Tutoría"],
+                ["Patricio_Santibañez", "Orientación"],
+                ["Sara_Sánchez", "Artes_Visuales/Tecnología"],
+                ["Mauricio_Morales", "Música"]
+            ],
+            "M": [
+                ["Diego_X", "Educación_Física_y_Salud"],
+                ["Joaquina_X", "Educación_Física_y_Salud"],
+                ["Patricio_Santibañez", "Crecer_y_Crecer/Religión"],
+                ["Cristian_X", "Crecer_y_Crecer/Religión"]
+            ]
+        }
+    },
+    "multiples_cursos": [
+        [["1A", "1B"], "Diego_X", "Educación_Física_y_Salud"],
+        [["2A", "2B"], "Diego_X", "Educación_Física_y_Salud"],
+        [["3A", "3B"], "Diego_X", "Educación_Física_y_Salud"],
+        [["4A", "4B"], "Diego_X", "Educación_Física_y_Salud"],
+        [["5A", "5B"], "Erik_X", "Educación_Física_y_Salud"],
+        [["6A", "6B"], "Diego_X", "Educación_Física_y_Salud"],
+        [["1A", "1B"], "Andrea_X", "Educación_Física_y_Salud"],
+        [["2A", "2B"], "Andrea_X", "Educación_Física_y_Salud"],
+        [["3A", "3B"], "Karla_X", "Educación_Física_y_Salud"],
+        [["4A", "4B"], "Joaquina_X", "Educación_Física_y_Salud"],
+        [["5A", "5B"], "Joaquina_X", "Educación_Física_y_Salud"],
+        [["6A", "6B"], "Joaquina_X", "Educación_Física_y_Salud"]
+    ],
+    "multiples_profesores": [
+        ["1A", ["Andrea_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["1A", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["1B", ["Andrea_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["1B", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["2A", ["Andrea_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["2A", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["2B", ["Andrea_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["2B", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["3A", ["Karla_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["3A", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["3B", ["Karla_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["3B", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["4A", ["Joaquina_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["4A", ["María_José_X", "Víctor_X"], "Crecer_y_Crecer/Religión"],
+        ["4A", ["Patricio_Vidal", "Ramiro_X"], "Música"],
+        ["4B", ["Joaquina_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["4B", ["María_José_X", "Cristian_X"], "Crecer_y_Crecer/Religión"],
+        ["4B", ["Patricio_Vidal", "Ramiro_X"], "Música"],
+        ["5A", ["Joaquina_X", "Erik_X"], "Educación_Física_y_Salud"],
+        ["5A", ["María_José_X", "Cristian_X"], "Crecer_y_Crecer/Religión"],
+        ["5A", ["Patricio_Vidal", "Ramiro_X"], "Música"],
+        ["5A", ["Erika_Albornoz", "Jessica_Díaz"], "Matemática"],
+        ["5B", ["Joaquina_X", "Erik_X"], "Educación_Física_y_Salud"],
+        ["5B", ["María_José_X", "Cristian_X"], "Crecer_y_Crecer/Religión"],
+        ["5B", ["Patricio_Vidal", "Ramiro_X"], "Música"],
+        ["6A", ["Joaquina_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["6A", ["María_José_X", "Cristian_X"], "Crecer_y_Crecer/Religión"],
+        ["6B", ["Joaquina_X", "Diego_X"], "Educación_Física_y_Salud"],
+        ["6B", ["Patricio_Santibañez", "Cristian_X"], "Crecer_y_Crecer/Religión"]
+    ],
+    "ramos_por_curso": {
+        "1A": {
+            "Matemática": {
+                "modulos_semanales": 7,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Tutoría2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "1B": {
+            "Matemática": {
+                "modulos_semanales": 7,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Tutoría2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "2A": {
+            "Matemática": {
+                "modulos_semanales": 7,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Tutoría2": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "2B": {
+            "Matemática": {
+                "modulos_semanales": 7,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Tutoría2": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "3A": {
+            "Matemática": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "3B": {
+            "Matemática": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "4A": {
+            "Matemática": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "4B": {
+            "Matemática": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 8,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2
+            },
+            "Tecnología": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Artes_Visuales": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "5A": {
+            "Matemática": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés1": {
+                "modulos_semanales": 7,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Artes_Visuales/Tecnología": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "5B": {
+            "Matemática": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés1": {
+                "modulos_semanales": 7,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Artes_Visuales/Tecnología": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "6A": {
+            "Matemática": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés1": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Artes_Visuales/Tecnología": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        },
+        "6B": {
+            "Matemática": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Ciencias_Naturales": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Música": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés1": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Inglés2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Tutoría": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Lenguaje_y_Comunicación": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2
+            },
+            "Educación_Física_y_Salud": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Historia,_Geografía_y_CS": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2
+            },
+            "Artes_Visuales/Tecnología": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            },
+            "Orientación": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 1
+            },
+            "Crecer_y_Crecer/Religión": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2
+            }
+        }
+    }
+}
