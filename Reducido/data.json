@@ -1,0 +1,362 @@
+{
+    "dias": [
+        "Lunes","Martes","Miercoles","Jueves","Viernes"
+    ],
+    "modulos": [
+        1,2,3,4,5,6,7,8,9,10
+    ],
+    "ramos_con_modulos_seguidos": {
+        "IVA": [
+            "Competencia_Lectora", "Electivo", "Matematica_M1-1", "Matematica_M1-2", "Historia_y_Ciencias_Sociales", "Fisica_Comun", "Ensayo1", "Ensayo2", "Ensayo3", "Ensayo4", "Educacion_Fisica_y_Salud", "Quimica_Comun", "Biologia_Comun/Matematica_M2-1", "Biologia_Comun/Matematica_M2-2" 
+        ],
+        "IVB": [
+            "Competencia_Lectora", "Electivo", "Matematica_M1-1", "Matematica_M1-2", "Historia_y_Ciencias_Sociales", "Fisica_Comun", "Ensayo1", "Ensayo2", "Ensayo3", "Ensayo4", "Educacion_Fisica_y_Salud", "Quimica_Comun", "Biologia_Comun/Matematica_M2-1", "Biologia_Comun/Matematica_M2-2" 
+        ]
+    },
+    "ramos_con_modulos_disjuntos": {
+        "IVA": [],
+        "IVB": []
+    },
+    "modulos_consecutivos": [
+        [1,2],
+        [3,4],
+        [5,6],
+        [7,8],
+        [9,10]
+    ],
+    "horarios": {
+        "IVA": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miercoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8],
+            "Viernes": [1,2,3,4,5,6]
+        },
+        "IVB": {
+            "Lunes": [1,2,3,4,5,6,7,8,9,10],
+            "Martes": [1,2,3,4,5,6,7,8,9,10],
+            "Miercoles": [1,2,3,4,5,6,7,8,9,10],
+            "Jueves": [1,2,3,4,5,6,7,8],
+            "Viernes": [1,2,3,4,5,6]
+        }
+    },
+    "limitaciones_profesores": {
+        "Arias_Marcela": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Bravo_Marcela": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Claros_Carlos": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Arancibia_Beatriz": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Cortes_Eraldo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Reyes_Luis": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Maricel": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Patricio": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Perez_Andrea": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Guillermo": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Joaquina": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Castillo_Andres": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Ceballos_Paula": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Olivera_Karen": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        },
+        "Escares_Cristian": {
+            "maximo_modulos": 50,
+            "maximo_modulos_diario": 10
+        }
+    },
+    "carga_profesores": {
+        "Arias_Marcela": [
+            [["IVA"], "Competencia_Lectora"],
+            [["IVA"], "Ensayo3"]
+        ],
+        "Bravo_Marcela": [
+            [["IVA", "IVB"], "Electivo"],
+            [["IVA", "IVB"], "Biologia_Comun/Matematica_M2-1"],
+            [["IVA", "IVB"], "Biologia_Comun/Matematica_M2-2"]
+        ],
+        "Claros_Carlos": [
+            [["IVA", "IVB"], "Biologia_Comun/Matematica_M2-1"],
+            [["IVA", "IVB"], "Electivo"],
+            [["IVA", "IVB"], "Fisica_Comun"]
+        ],
+        "Arancibia_Beatriz": [
+            [["IVA", "IVB"], "Electivo"],
+            [["IVA", "IVB"], "Quimica_Comun"]
+        ],
+        "Cortes_Eraldo": [
+            [["IVA"], "Matematica_M1-1"],
+            [["IVB"], "Matematica_M1-1"]
+        ],
+        "Reyes_Luis": [
+            [["IVA", "IVB"], "Historia_y_Ciencias_Sociales"]
+        ],
+        "Maricel": [
+            [["IVA"], "Ensayo1"]
+        ],
+        "Patricio": [
+            [["IVA"], "Ensayo1"]
+        ],
+        "Perez_Andrea": [
+            [["IVA"], "Ensayo2"],
+            [["IVB"], "Ensayo4"]
+        ],
+        "Guillermo": [
+            [["IVA", "IVB"], "Educacion_Fisica_y_Salud"]
+        ],
+        "Joaquina": [
+            [["IVA", "IVB"], "Educacion_Fisica_y_Salud"]
+        ],
+        "Castillo_Andres": [
+            [["IVA", "IVB"], "Biologia_Comun/Matematica_M2-2"]
+        ],
+        "Ceballos_Paula": [
+            [["IVB"], "Ensayo3"],
+            [["IVA"], "Ensayo4"]
+        ],
+        "Olivera_Karen": [
+            [["IVB"], "Competencia_Lectora"],
+            [["IVB"], "Ensayo2"]
+        ],
+        "Escares_Cristian": [
+            [["IVB"], "Ensayo1"]
+        ]
+    },
+    "profesores_por_curso": {
+        "IVA": [
+            [["Arias_Marcela"], "Competencia_Lectora"],
+            [["Bravo_Marcela", "Claros_Carlos", "Arancibia_Beatriz"], "Electivo"],
+            [["Cortes_Eraldo"], "Matematica_M1-1"],
+            [["Reyes_Luis"], "Historia_y_Ciencias_Sociales"],
+            [["Claros_Carlos"], "Fisica_Comun"],
+            [["Maricel", "Patricio"], "Ensayo1"],
+            [["Perez_Andrea"], "Ensayo2"],
+            [["Arias_Marcela"], "Ensayo3"],
+            [["Guillermo", "Joaquina"], "Educacion_Fisica_y_Salud"],
+            [["Castillo_Andres"], "Matematica_M1-2"],
+            [["Arancibia_Beatriz"], "Quimica_Comun"],
+            [["Bravo_Marcela", "Claros_Carlos"], "Biologia_Comun/Matematica_M2-1"],               
+            [["Bravo_Marcela", "Castillo_Andres"], "Biologia_Comun/Matematica_M2-2"],
+            [["Ceballos_Paula"], "Ensayo4"]
+        ],
+        "IVB": [
+            [["Olivera_Karen"], "Competencia_Lectora"],
+            [["Bravo_Marcela", "Claros_Carlos", "Arancibia_Beatriz"], "Electivo"],
+            [["Cortes_Eraldo"], "Matematica_M1-1"],
+            [["Reyes_Luis"], "Historia_y_Ciencias_Sociales"],
+            [["Claros_Carlos"], "Fisica_Comun"],
+            [["Escares_Cristian"], "Ensayo1"],
+            [["Olivera_Karen"], "Ensayo2"],
+            [["Perez_Andrea"], "Ensayo4"],
+            [["Guillermo", "Joaquina"], "Educacion_Fisica_y_Salud"],
+            [["Castillo_Andres"], "Matematica_M1-2"],
+            [["Arancibia_Beatriz"], "Quimica_Comun"],
+            [["Bravo_Marcela", "Claros_Carlos"], "Biologia_Comun/Matematica_M2-1"],
+            [["Bravo_Marcela", "Castillo_Andres"], "Biologia_Comun/Matematica_M2-2"],
+            [["Ceballos_Paula"], "Ensayo3"]
+        ]
+    },
+    "profesores_a_definir_por_curso": {
+        "IVA": [],
+        "IVB": []
+    },
+    "ramos_por_curso": {
+        "IVA": {
+            "Competencia_Lectora": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Electivo": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Matematica_M1-1": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Historia_y_Ciencias_Sociales": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Fisica_Comun": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo2": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo3": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo4": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Educacion_Fisica_y_Salud": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Matematica_M1-2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Quimica_Comun": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Biologia_Comun/Matematica_M2-1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Biologia_Comun/Matematica_M2-2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            }
+        },
+        "IVB": {
+            "Competencia_Lectora": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Electivo": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Matematica_M1-1": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Historia_y_Ciencias_Sociales": {
+                "modulos_semanales": 6,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Fisica_Comun": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo2": {
+                "modulos_semanales": 3,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo3": {
+                "modulos_semanales": 1,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Ensayo4": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Educacion_Fisica_y_Salud": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Matematica_M1-2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Quimica_Comun": {
+                "modulos_semanales": 4,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Biologia_Comun/Matematica_M2-1": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            },
+            "Biologia_Comun/Matematica_M2-2": {
+                "modulos_semanales": 2,
+                "maximo_modulos_diarios": 2,
+                "tipo_modulos": "seguidos"
+            }
+        }
+    },
+    "asignaciones_fijadas": [
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-1", "Lunes", 4],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 1]
+    ],
+    "asignaciones_vetadas": [
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 1],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 2],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 3],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 4],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 5],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 6],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 7],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 8],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 9],
+        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 10]
+    ]
+}

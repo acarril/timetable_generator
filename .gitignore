@@ -2,4 +2,8 @@
 *.sol
 .txt
 App/
-venv38/
+
+venv38/Include
+venv38/Lib
+venv38/Scripts/
+venv38/pyvenv.cfg
