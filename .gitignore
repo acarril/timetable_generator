@@ -1,7 +1,6 @@
 *.lp
 *.sol
 .txt
-App/
 
 venv38/Include
 venv38/Lib
