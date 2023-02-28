@@ -344,19 +344,19 @@
         }
     },
     "asignaciones_fijadas": [
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-1", "Lunes", 4],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 1]
     ],
     "asignaciones_vetadas": [
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 1],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 2],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 3],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 4],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 5],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 6],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 7],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 8],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 9],
-        ["IVA", "Bravo_Marcela", "Biologia_Comun/Matematica_M2-2", "Lunes", 10]
-    ]
+    ],
+    "ramos_en_distintos_dias": {
+        "IVA": [
+            [[["Cortes_Eraldo"], "Matematica_M1-1"], [["Castillo_Andres"], "Matematica_M1-2"]],
+            [[["Maricel", "Patricio"], "Ensayo1"],  [["Perez_Andrea"], "Ensayo2"], [["Arias_Marcela"], "Ensayo3"], [["Ceballos_Paula"], "Ensayo4"]],
+            [[["Bravo_Marcela", "Claros_Carlos"], "Biologia_Comun/Matematica_M2-1"], [["Bravo_Marcela", "Castillo_Andres"], "Biologia_Comun/Matematica_M2-2"]]
+        ],
+        "IVB": [
+            [[["Cortes_Eraldo"], "Matematica_M1-1"], [["Castillo_Andres"], "Matematica_M1-2"]],
+            [[["Escares_Cristian"], "Ensayo1"],  [["Olivera_Karen"], "Ensayo2"], [["Ceballos_Paula"], "Ensayo3"], [["Perez_Andrea"], "Ensayo4"]],
+            [[["Bravo_Marcela", "Claros_Carlos"], "Biologia_Comun/Matematica_M2-1"], [["Bravo_Marcela", "Castillo_Andres"], "Biologia_Comun/Matematica_M2-2"]]
+        ]
+    }
 }

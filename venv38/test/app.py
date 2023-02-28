@@ -3,7 +3,6 @@ import gurobipy as gp
 from gurobipy import GRB
 import json
 import math
-from prettytable import PrettyTable
 from typing import List, Mapping, Tuple, Union
 
 def formar_asignaciones(profesores_por_curso: Mapping[str, List[Union[List[str], str]]]) -> List[Tuple[str, str, str]]:
@@ -262,21 +261,53 @@ def armar_modelo(data: dict) -> Mapping[int, str]:
         out[i + 1] = vs
     return out
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     return {'hello': 'world'}
 
-@app.route('/test')
+@app.route('/test', methods=['POST'], content_types=['application/json'])
 def test():
-    with open('model.lp','r') as f:
-        contents = f.read()
-    return {
-        "output": contents
-    }
+    # data = 'hola'
+    data = app.current_request.raw_body
+    decoded = data.decode('UTF-8')
+    print(decoded)
+    loc = decoded.rfind('%5B')
+    breaker = False
+    counter = 1
+    if loc != 1:
+        while not breaker and loc != 1:
+            if decoded[loc - counter] != int:
+                breaker = True
+            else:
+                breaker = False
+            counter += 1
+    last_tuple = decoded[loc - counter + 1:loc]
+    print(last_tuple)
+    first_index = 0
+    final = {}
+    for i in range(int(last_tuple) + 1):
+        if i != int(last_tuple):
+            last_index = decoded.find(f'{str(i+1)}%5B')
+        else:
+            last_index = len(decoded)
+        elem = decoded[first_index:last_index]
+        first_index = last_index
+        elem = elem.replace(f'{str(i)}%5B', '')
+        elem = elem.replace('%5D=', ':')
+        elem = elem.replace('&', ',')
+        elem = elem.replace('+', ' ')
+        # print(dict([item.split(":") for item in elem.split(",")]))
+        final[i] = elem
+        # decoded = decoded.replace(f'{str(i)}%5B','')
+        # decoded = decoded.replace('%5D', ':')
+        # decoded = decoded.replace('%C3%B3', 'ó')
+        # decoded = decoded.replace('+', ' ')
+    print(final)
+    return {'hello': 'perkin'}
 
 
 
-@app.route('/test2', methods=['POST'])
+@app.route('/test2', methods=['POST'], content_types=['application/x-www-form-urlencoded; charset=UTF-8'])
 def enviar():
     user_as_json = app.current_request.json_body
     resultado = armar_modelo(user_as_json)

@@ -24,6 +24,7 @@
   </tbody>
 </table>
 
+
 <div>
   Módulos a repartir: {{ modulos_a_repartir }}
 </div>
@@ -33,14 +34,15 @@
 <br>
 <br>
 
-
+<div>{{ info }}</div>
+<!-- 
   <div>
     <div class="drop-zone" @dragover="prevent($event)" @drop="onDrop($event, 'idle')">
       <div class="drag-el" v-for="item in listOne" :key="item.nombre" draggable="true" @dragstart="startDrag($event, item)">
         {{ item.nombre }}
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -55,6 +57,9 @@ export default {
       },
       dias:{
           type: Array,
+      },
+      info: {
+        type: Array,
       }
   }, 
   data() {
@@ -71,9 +76,6 @@ export default {
     listOne() {
       return this.items.filter((item) => item.list === 'idle')
     },
-    lunes1() {
-      return this.items.filter((item) => item.list === 'Lunes1')
-    }
   },
   methods: {
     selectCell(id) {
