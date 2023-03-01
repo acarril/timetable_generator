@@ -40,15 +40,34 @@ Todo esto se encuentra disponible en `modelo_limpio.ipynb`.
 ## Herramientas implementadas
 - [x] Asignar manualmente un módulo de clases
 - [x] Limitar la cantidad de días que un profesor hace clases
-- [ ] Considerar salas (¿es lo mismo que ciertos cursos que no pueden realizarse simultáneamente? &rarr; Considerablemente más fácil de resolver)
 - [x] Ramos con más de un profesor
 - [x] Ramos simultáneos (un profesor para varios cursos)
 - [x] Módulos de clases continuos
 - [x] Vetar combinaciones de módulos
-- [ ] Priorizar restricciones adicionales e ir eliminando de menos a más importantes
+- [x] Priorizar restricciones adicionales e ir eliminando de menos a más importantes
+- [ ] Considerar salas (¿es lo mismo que ciertos cursos que no pueden realizarse simultáneamente? &rarr; Considerablemente más fácil de resolver)
 
-## Trabajo futuro
-- Generar archivos `.json` a partir de una interfaz gráfica (hay una idea de esto en el archivo `interfaz.py`, pero muy básica)
-- Conseguirse datos reales
-- Empezar a trabajar la interfaz en Vue
-- Implementar API con Chalice
+## Benchmarks
+Los tiempos que se presentan a continuación pueden servir como cota superior al momento de programar horarios. De esta forma, se puede tener una estimación de tiempo para el cómputo de los horarios que se le puede entregar al usuario. Estos valores surgen de una programación de horarios que repetía harto los profesores, tenía prácticamente todos los bloques de clases duplicados, donde se simulo que algunos profesores tenían restricción de días y se tenía a disposición casi 50 módulos de clases a la semana. Es difícil que otro colegio supere las condiciones impuestas por este colegio, por lo que es un buen punto de referencia para una cota superior.
+
+El procesador usado fue un **i7-1165G7 @ 2.80GHz, 4 núcleos**.
+
+El tiempo a medir considera todo el procesamiento de datos, el tiempo que se demora Gurobi en armar el modelo, en resolverlo y el tiempo que se demora en escribir archivos con los datos. Al momento de implementarlo no se tendrá que escribir archivos, pero si se tendrá que considerar el tiempo que se demora en recibir y enviar requests el servidor.
+
+| Cantidad de cursos | Tiempo sin variable n <br> F.O. = 0 | Tiempo con variable n | Sugerencia de tiempo <br> sin variable n | Sugerencia de tiempo <br> con variable n | 
+| :----: | :----: | :----: | :----: | :----: |
+| 2 cursos | 0.35s | 0.7s | 1s | 1s |
+| 4 cursos | 1.40s | 0.9s | 2s | 2s |
+| 6 cursos | 0.94s | 2.13s | 2s | 3s |
+| 8 cursos | 1.45s | 1.54s | 2s | 4s |
+| 10 cursos | 2.32s | 4.08s | 3s | 6s |
+| 12 cursos | 2.26s | 9.40s | 3s | 10s |
+| 14 cursos | 3.53s | 16.75s | 4s | 20s |
+| 16 cursos | 5.12s | 29.62s | 6s | 35s |
+| 18 cursos | 3.80s | 18.51s | 6s | 45s |
+| 20 cursos | 4.73s | 41.44s | 7s | 1min |
+| 22 cursos | 6.79s | 27.85s | 9s | 1min 10s |
+| 24 cursos | 7.35s | 51.11s | 10s | 1min 30s |
+
+Las dos últimas columnas son una sugerencia para poner en el programa de forma que se tenga un "colchón para los resultados". Tal como se puede ver en la tabla, hay algunas cantidades de cursos que a pesar de ser menor (en número) tardan más, por lo que para asegurarse de no tener al usuario esperando se recomienda ser conservadores con la estimación de tiempo. Mayor cantidad de pruebas podrán acercar esta cota a un valor real, pero los valores que se presentan en la tabla no debieran estar muy alejados de las cotas reales.
+
