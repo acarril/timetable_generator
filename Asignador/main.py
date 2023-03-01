@@ -90,7 +90,7 @@ def asignaciones_no_hechas(profesores_a_definir_por_curso: Mapping[str, List[Uni
 
 model = gp.Model("Generación de horarios de colegio")
 # model.setParam('OutputFlag', 1)
-f = open('probando_formato.json',encoding='utf8')
+f = open('data/probando_formato.json',encoding='utf8')
 
 M = 10000
 data = json.load(f)
@@ -133,7 +133,6 @@ w = model.addVars(no_asignaciones, vtype=GRB.BINARY, name="w")
 s = model.addVars(profesores_con_dias_limitados,dias,vtype=GRB.BINARY,name="s") # * Solo para los profesores que tienen menos de 5 días
 n = model.addVars(list(carga_profesores.keys()),dias,[i for i in modulos if i+4 in modulos],vtype=GRB.BINARY,name="v")
 
-model.addConstrs((M * n[p,d,j] >= sum(x[c,p,r,d,j] + y[c,p,r,d,j] + z[c,p,r,d,j] for cs,r in carga_profesores[p] for c in cs) for p in carga_profesores for d in dias for j in [i for i in modulos if i+4 in modulos]),name="R0")
 
 model.addConstrs((sum(x[c,ps[0],r,d,j] + z[c,ps[0],r,d,j] + y[c,ps[0],r,d,j]for ps,r in profesores_por_curso[c]) + sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for ps,r in profesores_a_definir_por_curso[c] for p in ps) <= 1 for c in horarios for d in horarios[c] for j in horarios[c][d]),name="R1")
 
@@ -157,9 +156,9 @@ for c in profesores_por_curso:
 for c in profesores_por_curso:
     for ps,r in profesores_por_curso[c]:
         if ramos_por_curso[c][r]['tipo_modulos'] == 'seguidos':
-            model.addConstrs((sum(x[c,p,r,d,j] for d in dias for j in modulos) == (ramos_por_curso[c][r]['modulos_semanales']) % 2 for p in ps if ramos_por_curso[c][r]),name=f"R6[{c},{r}]")
-            model.addConstrs((sum(z[c,p,r,d,j] for d in dias for j in modulos) == math.floor((ramos_por_curso[c][r]['modulos_semanales']) / 2) for p in ps if ramos_por_curso[c][r]),name=f"R7[{c},{r}]")
-            model.addConstrs((sum(y[c,p,r,d,j] for d in dias for j in modulos) == math.floor((ramos_por_curso[c][r]['modulos_semanales']) / 2) for p in ps if ramos_por_curso[c][r]),name=f"R8[{c},{r}]")
+            model.addConstrs((sum(x[c,p,r,d,j] for d in dias for j in modulos) == (ramos_por_curso[c][r]['modulos_semanales']) % 2 for p in ps),name=f"R6[{c},{r}]")
+            model.addConstrs((sum(z[c,p,r,d,j] for d in dias for j in modulos) == math.floor((ramos_por_curso[c][r]['modulos_semanales']) / 2) for p in ps),name=f"R7[{c},{r}]")
+            model.addConstrs((sum(y[c,p,r,d,j] for d in dias for j in modulos) == math.floor((ramos_por_curso[c][r]['modulos_semanales']) / 2) for p in ps),name=f"R8[{c},{r}]")
         else:
             model.addConstrs((sum(x[c,p,r,d,j] for d in dias for j in modulos) == ramos_por_curso[c][r]['modulos_semanales'] for p in ps if ramos_por_curso[c][r]),name=f"R9[{c},{r}]")
 
@@ -169,27 +168,32 @@ for c in profesores_a_definir_por_curso:
         for p in ps:
             aux.append(p)
         aux = tuple(aux)
-        model.addConstrs((sum(x[c,q,r,d,j] + z[c,q,r,d,j] + y[c,q,r,d,j] for q in aux for d in dias for j in modulos) == ramos_por_curso[c][r]['modulos_semanales']),name=f"R10[{c},{r}]")
+        if ramos_por_curso[c][r]['tipo_modulos'] == 'seguidos':
+            model.addConstrs((sum(x[c,q,r,d,j] for q in aux for d in dias for j in modulos) == (ramos_por_curso[c][r]['modulos_semanales']) % 2),name=f"R10[{c},{r}]")
+            model.addConstrs((sum(z[c,q,r,d,j] for q in aux for d in dias for j in modulos) == math.floor((ramos_por_curso[c][r]['modulos_semanales']) / 2)),name=f"R11[{c},{r}]")
+            model.addConstrs((sum(y[c,q,r,d,j] for q in aux for d in dias for j in modulos) == math.floor((ramos_por_curso[c][r]['modulos_semanales']) / 2)),name=f"R12[{c},{r}]")
+        else:
+            model.addConstrs((sum(x[c,q,r,d,j] for q in aux for d in dias for j in modulos) == ramos_por_curso[c][r]['modulos_semanales']),name=f"R13[{c},{r}]")
 
-model.addConstrs((sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for ps,r in profesores_por_curso[c] for p in ps) + sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for ps,r in profesores_a_definir_por_curso[c] for p in ps) == 0 for c in horarios for d in horarios[c] for j in list(set(modulos) - set(horarios[c][d]))),name="R11")
+model.addConstrs((sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for ps,r in profesores_por_curso[c] for p in ps) + sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for ps,r in profesores_a_definir_por_curso[c] for p in ps) == 0 for c in horarios for d in horarios[c] for j in list(set(modulos) - set(horarios[c][d]))),name="R14")
 
-model.addConstrs((sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p]) <= 1 for p in carga_profesores for d in dias for j in modulos),name="R12")
-
-for p in carga_profesores:
-    for cs,r in carga_profesores[p]:
-        model.addConstrs((x[c1,p,r,d,j] - x[c2,p,r,d,j] == 0 for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b] for d in dias for j in modulos), name=f"R13[{p},{r}]")
-
-for p in carga_profesores:
-    for cs,r in carga_profesores[p]:
-        model.addConstrs((z[c1,p,r,d,j] - z[c2,p,r,d,j] == 0 for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b] for d in dias for j in modulos), name=f"R14[{p},{r}]")
+model.addConstrs((sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p]) <= 1 for p in carga_profesores for d in dias for j in modulos),name="R15")
 
 for p in carga_profesores:
     for cs,r in carga_profesores[p]:
-        model.addConstrs((y[c1,p,r,d,j] - y[c2,p,r,d,j] == 0 for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b] for d in dias for j in modulos), name=f"R15[{p},{r}]")
+        model.addConstrs((x[c1,p,r,d,j] - x[c2,p,r,d,j] == 0 for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b] for d in dias for j in modulos), name=f"R16[{p},{r}]")
+
+for p in carga_profesores:
+    for cs,r in carga_profesores[p]:
+        model.addConstrs((z[c1,p,r,d,j] - z[c2,p,r,d,j] == 0 for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b] for d in dias for j in modulos), name=f"R17[{p},{r}]")
+
+for p in carga_profesores:
+    for cs,r in carga_profesores[p]:
+        model.addConstrs((y[c1,p,r,d,j] - y[c2,p,r,d,j] == 0 for c1,c2 in [(cs[a],cs[b]) for a in range(len(cs)) for b in range(len(cs)) if a < b] for d in dias for j in modulos), name=f"R18[{p},{r}]")
     
 for c in profesores_por_curso:
     for ps,r in profesores_por_curso[c]:
-        model.addConstrs((sum(x[c,ps[0],r,d,j] + z[c,ps[0],r,d,j] + y[c,ps[0],r,d,j] for j in modulos) <= ramos_por_curso[c][r]['maximo_modulos_diarios'] for d in dias),name=f"R16[{c},{p},{r}]")
+        model.addConstrs((sum(x[c,ps[0],r,d,j] + z[c,ps[0],r,d,j] + y[c,ps[0],r,d,j] for j in modulos) <= ramos_por_curso[c][r]['maximo_modulos_diarios'] for d in dias),name=f"R19[{c},{p},{r}]")
 
 for c in profesores_a_definir_por_curso:
     for ps,r in profesores_a_definir_por_curso[c]:
@@ -197,55 +201,51 @@ for c in profesores_a_definir_por_curso:
         for p in ps:
             aux.append(p)
         aux = tuple(aux)
-        model.addConstrs((sum(x[c,q,r,d,j] + z[c,q,r,d,j] + y[c,q,r,d,j] for q in aux for j in modulos) <= ramos_por_curso[c][r]['maximo_modulos_diarios'] for d in dias),name=f"R17[{c},{r}]")
+        model.addConstrs((sum(x[c,q,r,d,j] + z[c,q,r,d,j] + y[c,q,r,d,j] for q in aux for j in modulos) <= ramos_por_curso[c][r]['maximo_modulos_diarios'] for d in dias),name=f"R20[{c},{r}]")
 
-model.addConstrs((x[c,p,r,d,j] + x[c,p,r,d,k] <= 1 for c,p,r in total_asignaciones if ramos_por_curso[c][r]['tipo_modulos'] == 'disjuntos' for d in dias for j,k in modulos_consecutivos), name="R18")
+model.addConstrs((x[c,p,r,d,j] + x[c,p,r,d,k] <= 1 for c,p,r in total_asignaciones if ramos_por_curso[c][r]['tipo_modulos'] == 'disjuntos' for d in dias for j,k in modulos_consecutivos), name="R21")
 
-model.addConstrs((sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p] for d in dias for j in modulos) <= limitaciones_profesores[p]['maximo_modulos'] for p in carga_profesores),name="R19")
+model.addConstrs((sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p] for d in dias for j in modulos) <= limitaciones_profesores[p]['maximo_modulos'] for p in carga_profesores),name="R22")
 
-model.addConstrs((sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p] for j in modulos) <= limitaciones_profesores[p]['maximo_modulos_diario'] for p in carga_profesores for d in dias),name="R20")
+model.addConstrs((sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p] for j in modulos) <= limitaciones_profesores[p]['maximo_modulos_diario'] for p in carga_profesores for d in dias),name="R23")
 
-model.addConstrs((M * s[p,d] >= sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p] for j in modulos) for d in dias for p in profesores_con_dias_limitados),name="R21")
+model.addConstrs((M * s[p,d] >= sum(x[cs[0],p,r,d,j] + z[cs[0],p,r,d,j] + y[cs[0],p,r,d,j] for cs,r in carga_profesores[p] for j in modulos) for d in dias for p in profesores_con_dias_limitados),name="R24")
 
-model.addConstrs((sum(s[p,d] for d in dias) <= tope_dias[p] for p in profesores_con_dias_limitados),name="R22")
+model.addConstrs((sum(s[p,d] for d in dias) <= tope_dias[p] for p in profesores_con_dias_limitados),name="R25")
 
 for c in profesores_a_definir_por_curso:
     for ps,r in profesores_a_definir_por_curso[c]:
-        model.addConstrs((M * w[c,p,r] >= sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for d in horarios[c] for j in horarios[c][d]) for p in ps),name=f"R23[{c},{r}]")
+        model.addConstrs((M * w[c,p,r] >= sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for d in horarios[c] for j in horarios[c][d]) for p in ps),name=f"R26[{c},{r}]")
 
-model.addConstrs((sum(w[c,p,r] for ps,r in profesores_a_definir_por_curso[c] for p in ps) <= 1 for c in profesores_a_definir_por_curso),name="R24")
+model.addConstrs((sum(w[c,p,r] for ps,r in profesores_a_definir_por_curso[c] for p in ps) <= 1 for c in profesores_a_definir_por_curso),name="R27")
 
-model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] == 1 for c,p,r,d,j in asignaciones_fijadas),name="R25");
+model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] == 1 for c,p,r,d,j in asignaciones_fijadas),name="R28");
 
 lista_restricciones = []
 for c,p,r,d,j in asignaciones_fijadas:
-    lista_restricciones.append(f"R25[{c},{p},{r},{d},{j}]")
+    lista_restricciones.append(f"R28[{c},{p},{r},{d},{j}]")
 
-model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] == 0 for c,p,r,d,j in asignaciones_vetadas),name="R26");
+model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] == 0 for c,p,r,d,j in asignaciones_vetadas),name="R29");
 
 for c,p,r,d,j in asignaciones_vetadas:
-    lista_restricciones.append(f"R26[{c},{p},{r},{d},{j}]")
+    lista_restricciones.append(f"R29[{c},{p},{r},{d},{j}]")
 
 for c in ramos_en_distintos_dias:
     for ls in ramos_en_distintos_dias[c]:
         for p1,r1,p2,r2 in [(ls[b][0][i],ls[b][1],ls[d][0][k],ls[d][1]) for b in range(len(ls)) for d in range(len(ls)) if b < d for i in range(len(ls[b][0])) for k in range(len(ls[d][0]))]:
-            model.addConstrs((sum(x[c,p1,r1,d,j] + x[c,p2,r2,d,j] + z[c,p1,r1,d,j] + z[c,p2,r2,d,j] + y[c,p1,r1,d,j] + y[c,p2,r2,d,j] for j in modulos) <= max(ramos_por_curso[c][r1]['maximo_modulos_diarios'], ramos_por_curso[c][r2]['maximo_modulos_diarios']) for d in dias),name="R27")
+            model.addConstrs((sum(x[c,p1,r1,d,j] + x[c,p2,r2,d,j] + z[c,p1,r1,d,j] + z[c,p2,r2,d,j] + y[c,p1,r1,d,j] + y[c,p2,r2,d,j] for j in modulos) <= max(ramos_por_curso[c][r1]['maximo_modulos_diarios'], ramos_por_curso[c][r2]['maximo_modulos_diarios']) for d in dias),name="R30")
 
-model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j]<= 1 for c,p,r in total_asignaciones for d in dias for j in modulos),name="R27")
+model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] <= 1 for c,p,r in total_asignaciones for d in dias for j in modulos),name="R31")
 
-for j,k in modulos_consecutivos:
-    model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] <= 1 for c,p,r in total_asignaciones for d in dias),name=f"R28[{j}]")
+model.addConstrs((z[c,p,r,d,j] - y[c,p,r,d,k] == 0 for c,p,r in total_asignaciones for d in dias for j,k in [(modulos[i],modulos[i+1]) for i in range(len(modulos) - 1)]),name="R32")
 
-for j,k in modulos_consecutivos:
-    model.addConstrs((x[c,p,r,d,k] + y[c,p,r,d,k] <= 1 for c,p,r in total_asignaciones for d in dias),name=f"R29[{k}]")
+model.addConstrs((z[c,p,r,d,j] == 0 for c,p,r in total_asignaciones for d in dias for j in segundos_modulos_exclusivos),name="R33")
 
-model.addConstrs((z[c,p,r,d,j] - y[c,p,r,d,k] == 0 for c,p,r in total_asignaciones for d in dias for j,k in [(modulos[i],modulos[i+1]) for i in range(len(modulos) - 1)]),name="R30")
+model.addConstrs((y[c,p,r,d,j] == 0 for c,p,r in total_asignaciones for d in dias for j in primeros_modulos_exclusivos),name="R34")
 
-model.addConstrs((z[c,p,r,d,j] == 0 for c,p,r in total_asignaciones for d in dias for j in segundos_modulos_exclusivos),name="R31")
+model.addConstrs((M * n[p,d,j] >= sum(x[c,p,r,d,j] + y[c,p,r,d,j] + z[c,p,r,d,j] for cs,r in carga_profesores[p] for c in cs) for p in carga_profesores for d in dias for j in [i for i in modulos if i+4 in modulos]),name="R33")
 
-model.addConstrs((y[c,p,r,d,j] == 0 for c,p,r in total_asignaciones for d in dias for j in primeros_modulos_exclusivos),name="R32")
-
-# model.addConstrs((sum(x[cs[0],p,r,d,j1] + x[cs[0],p,r,d,j2] + x[cs[0],p,r,d,j3] + x[cs[0],p,r,d,j4] + x[cs[0],p,r,d,j5] + z[cs[0],p,r,d,j1] + z[cs[0],p,r,d,j2] + z[cs[0],p,r,d,j3] + z[cs[0],p,r,d,j4] + z[cs[0],p,r,d,j5] + y[cs[0],p,r,d,j1] + y[cs[0],p,r,d,j2] + y[cs[0],p,r,d,j3] + y[cs[0],p,r,d,j4] + y[cs[0],p,r,d,j5] for cs,r in carga_profesores[p]) <= 4 for p in carga_profesores for d in dias for j1,j2,j3,j4,j5 in [(i,i+1,i+2,i+3,i+4) for i in modulos if i+4 in modulos]), name="R33")
+# model.addConstrs((sum(x[cs[0],p,r,d,j1] + x[cs[0],p,r,d,j2] + x[cs[0],p,r,d,j3] + x[cs[0],p,r,d,j4] + x[cs[0],p,r,d,j5] + z[cs[0],p,r,d,j1] + z[cs[0],p,r,d,j2] + z[cs[0],p,r,d,j3] + z[cs[0],p,r,d,j4] + z[cs[0],p,r,d,j5] + y[cs[0],p,r,d,j1] + y[cs[0],p,r,d,j2] + y[cs[0],p,r,d,j3] + y[cs[0],p,r,d,j4] + y[cs[0],p,r,d,j5] for cs,r in carga_profesores[p]) <= 4 for p in carga_profesores for d in dias for j1,j2,j3,j4,j5 in [(i,i+1,i+2,i+3,i+4) for i in modulos if i+4 in modulos]), name="R34")
 
 obj = sum(n[p,d,j] for p in carga_profesores for d in dias for j in [i for i in modulos if i+4 in modulos])
 model.setObjective(obj, GRB.MINIMIZE)
