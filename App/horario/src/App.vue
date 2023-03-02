@@ -26,7 +26,7 @@ export default {
         maximo_diario: 1,
         tipo_modulos: 'Sin preferencia'
       }],
-      test: {a: 'a'},
+      test: {body: this.tuplas},
     }
   },
   setup(){
@@ -44,8 +44,8 @@ export default {
       if (this.tuplas[0].curso === '') {
         this.tuplas.shift();
       };
-      console.log(this.tuplas);
-      const json = JSON.stringify(this.tuplas);
+      console.log(this.test);
+      const json = JSON.stringify(this.test);
       axios
       .post('http://localhost:8000/test', json, {
         headers : {
