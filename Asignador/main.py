@@ -4,6 +4,7 @@ import json
 import math
 from prettytable import PrettyTable
 from typing import List, Mapping, Tuple, Union
+import time
 
 def formar_asignaciones(profesores_por_curso: Mapping[str, List[Union[List[str], str]]]) -> List[Tuple[str, str, str]]:
     """Esta función forma la lista de tuplas (curso,profesor,ramo) que deben ser asignadas de forma que puedan ser ingresadas al modelo.
@@ -88,9 +89,10 @@ def asignaciones_no_hechas(profesores_a_definir_por_curso: Mapping[str, List[Uni
                 no_asignaciones.append((curso, prof, tupla[1]))
     return no_asignaciones
 
+start_time = time.time()
 model = gp.Model("Generación de horarios de colegio")
 # model.setParam('OutputFlag', 1)
-f = open('data/probando_formato.json',encoding='utf8')
+f = open('Asignador/data/probando_formato_copy_copy.json',encoding='utf8')
 
 M = 10000
 data = json.load(f)
@@ -131,7 +133,7 @@ y = model.addVars(total_asignaciones,dias,modulos,vtype=GRB.BINARY, name="y")
 # * Solo para los cursos donde se prefieren módulos dobles
 w = model.addVars(no_asignaciones, vtype=GRB.BINARY, name="w")
 s = model.addVars(profesores_con_dias_limitados,dias,vtype=GRB.BINARY,name="s") # * Solo para los profesores que tienen menos de 5 días
-n = model.addVars(list(carga_profesores.keys()),dias,[i for i in modulos if i+4 in modulos],vtype=GRB.BINARY,name="v")
+n = model.addVars(list(carga_profesores.keys()),dias,[i for i in modulos if i+4 in modulos],vtype=GRB.BINARY,name="n")
 
 
 model.addConstrs((sum(x[c,ps[0],r,d,j] + z[c,ps[0],r,d,j] + y[c,ps[0],r,d,j]for ps,r in profesores_por_curso[c]) + sum(x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] for ps,r in profesores_a_definir_por_curso[c] for p in ps) <= 1 for c in horarios for d in horarios[c] for j in horarios[c][d]),name="R1")
@@ -233,7 +235,7 @@ for c,p,r,d,j in asignaciones_vetadas:
 for c in ramos_en_distintos_dias:
     for ls in ramos_en_distintos_dias[c]:
         for p1,r1,p2,r2 in [(ls[b][0][i],ls[b][1],ls[d][0][k],ls[d][1]) for b in range(len(ls)) for d in range(len(ls)) if b < d for i in range(len(ls[b][0])) for k in range(len(ls[d][0]))]:
-            model.addConstrs((sum(x[c,p1,r1,d,j] + x[c,p2,r2,d,j] + z[c,p1,r1,d,j] + z[c,p2,r2,d,j] + y[c,p1,r1,d,j] + y[c,p2,r2,d,j] for j in modulos) <= max(ramos_por_curso[c][r1]['maximo_modulos_diarios'], ramos_por_curso[c][r2]['maximo_modulos_diarios']) for d in dias),name="R30")
+            model.addConstrs((sum(x[c,p1,r1,d,j] + x[c,p2,r2,d,j] + z[c,p1,r1,d,j] + z[c,p2,r2,d,j] + y[c,p1,r1,d,j] + y[c,p2,r2,d,j] for j in modulos) <= max(ramos_por_curso[c][r1]['maximo_modulos_diarios'], ramos_por_curso[c][r2]['maximo_modulos_diarios']) for d in dias),name=f"R30[{c},{p1},{p2},{r1},{r2}]")
 
 model.addConstrs((x[c,p,r,d,j] + z[c,p,r,d,j] + y[c,p,r,d,j] <= 1 for c,p,r in total_asignaciones for d in dias for j in modulos),name="R31")
 
@@ -258,7 +260,7 @@ model.update()
 
 seguir = True
         
-model.write('probando.lp')
+model.write('Asignador/probando.lp')
 # model.computeIIS()
 # removed =[]
 # for c in model.getConstrs():
@@ -283,4 +285,7 @@ for i in range(model.SolCount):
     model.update()
 
     print(model.optimize())
-    model.write(f"solutions/out{i+1}.sol")
+    model.write(f"Asignador/solutions/out{i+1}.sol")
+
+end_time = time.time()
+print(end_time - start_time)
