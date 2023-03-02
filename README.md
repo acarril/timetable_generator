@@ -9,12 +9,9 @@ Los datos mínimos para comenzar con la generación de horarios son los siguient
 - Información sobre cantidad de módulos de clases para cada curso (cantidad de módulos de clases semanales)
 - Forma que se quiere que tenga el horario de cada curso
 
-Con estos datos se puede hacer la "preasignación", la cual se encuentra disponible en `preasignacion.ipynb`. Este programa permite generar los datos necesarios para generar los horarios, es decir, qué profesor le hace qué ramo a cada curso y los preserva en el archivo `probando.json` (a falta de un nombre adecuado). Si esta información se tiene de forma previa, entonces se puede saltar el paso de la preasignación. En resumen la información necesaria sería:
-- Información sobre qué profesor le hace qué ramo a cada curso
-- Información sobre cantidad de módulos de clases para cada curso
-- Forma que se quiere que tenga el horario de cada curso
+El programa se encuentras disponible en la carpeta `Asignador`. Hay dos archivos `main.py` y `main.ipynb` (cualquiera de los dos sirve, en el Jupyter Notebook hay algunas herramientas de visualización eso sí). 
 
-Todo esto se encuentra disponible en `modelo_limpio.ipynb`.
+También se encuentra disponible un programa que permite tomar decisiones para asignar qué profesor le hace qué ramo a qué curso. Este está disponible en la carpeta `Preasignador`.
 <!-- Para hacer funcionar el programa se requieren las disponibilidades de todos los profesores y qué curso hace cada uno de ellos, la cantidad de horas que cada ramo tendrá para cada curso, entre qué módulos se encuentran las pausas (para conocer qué módulos son continuos) y conocer cuántos módulos de clases hay por día. -->
 
 <!-- ## ¿Cómo funciona?
@@ -46,6 +43,10 @@ Todo esto se encuentra disponible en `modelo_limpio.ipynb`.
 - [x] Vetar combinaciones de módulos
 - [x] Priorizar restricciones adicionales e ir eliminando de menos a más importantes
 - [ ] Considerar salas (¿es lo mismo que ciertos cursos que no pueden realizarse simultáneamente? &rarr; Considerablemente más fácil de resolver)
+
+En sí, considerar las salas no es un problema muy difícil, solo que no fue una de mis prioridades al programar. Se me ocurren dos maneras de modelar este problema:
+1. Se puede agregar un subíndice *s* a las variables del problema. Las asignaciones se pueden formar considerando las salas también. En la práctica se sabe (casi siempre) en qué sala sera un ramo. Luego, se puede modelar de forma parecida a los profesores. Por lo general se conocerá la sala en la que se hace clases (la misma sala del curso). Si se no se conoce se tiene la opción de meter tomar una decisión de forma similar a como se hace cuando no se conoce qué profesor hará un ramo. El problema con esta forma de implementar el uso de salas es que introducir un nuevo subíndice puede hacer que el programa tarde más en resolver. Habría que testear la *performance* de Gurobi con este tema.
+2. La otra opción es simplemente agrupar los ramos que no pueden ocurrir al mismo tiempo (ya que usan una misma sala). También se puede limitar cuántos de estos ramos ocurren al mismo tiempo. Por ejemplo, en un gimnasio podrían ocurrir 2 clases al mismo tiempo, por lo que todas las clases que usarán ese gimnasio no deben sumar más de 2 en cada módulo de clases. 
 
 ## Benchmarks
 Los tiempos que se presentan a continuación pueden servir como cota superior al momento de programar horarios. De esta forma, se puede tener una estimación de tiempo para el cómputo de los horarios que se le puede entregar al usuario. Estos valores surgen de una programación de horarios que repetía harto los profesores, tenía prácticamente todos los bloques de clases duplicados, donde se simulo que algunos profesores tenían restricción de días y se tenía a disposición casi 50 módulos de clases a la semana. Es difícil que otro colegio supere las condiciones impuestas por este colegio, por lo que es un buen punto de referencia para una cota superior.
