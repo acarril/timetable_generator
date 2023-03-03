@@ -268,41 +268,41 @@ def index():
 @app.route('/test', methods=['POST'], content_types=['application/json'])
 def test():
     # data = 'hola'
-    data = app.current_request.raw_body
-    decoded = data.decode('UTF-8')
-    print(decoded)
-    loc = decoded.rfind('%5B')
-    breaker = False
-    counter = 1
-    if loc != 1:
-        while not breaker and loc != 1:
-            if decoded[loc - counter] != int:
-                breaker = True
-            else:
-                breaker = False
-            counter += 1
-    last_tuple = decoded[loc - counter + 1:loc]
-    print(last_tuple)
-    first_index = 0
-    final = {}
-    for i in range(int(last_tuple) + 1):
-        if i != int(last_tuple):
-            last_index = decoded.find(f'{str(i+1)}%5B')
-        else:
-            last_index = len(decoded)
-        elem = decoded[first_index:last_index]
-        first_index = last_index
-        elem = elem.replace(f'{str(i)}%5B', '')
-        elem = elem.replace('%5D=', ':')
-        elem = elem.replace('&', ',')
-        elem = elem.replace('+', ' ')
-        # print(dict([item.split(":") for item in elem.split(",")]))
-        final[i] = elem
-        # decoded = decoded.replace(f'{str(i)}%5B','')
-        # decoded = decoded.replace('%5D', ':')
-        # decoded = decoded.replace('%C3%B3', 'ó')
-        # decoded = decoded.replace('+', ' ')
-    print(final)
+    # data = app.current_request.raw_body
+    # decoded = data.decode('UTF-8')
+    # print(decoded)
+    # loc = decoded.rfind('%5B')
+    # breaker = False
+    # counter = 1
+    # if loc != 1:
+    #     while not breaker and loc != 1:
+    #         if decoded[loc - counter] != int:
+    #             breaker = True
+    #         else:
+    #             breaker = False
+    #         counter += 1
+    # last_tuple = decoded[loc - counter + 1:loc]
+    # print(last_tuple)
+    # first_index = 0
+    # final = {}
+    # for i in range(int(last_tuple) + 1):
+    #     if i != int(last_tuple):
+    #         last_index = decoded.find(f'{str(i+1)}%5B')
+    #     else:
+    #         last_index = len(decoded)
+    #     elem = decoded[first_index:last_index]
+    #     first_index = last_index
+    #     elem = elem.replace(f'{str(i)}%5B', '')
+    #     elem = elem.replace('%5D=', ':')
+    #     elem = elem.replace('&', ',')
+    #     elem = elem.replace('+', ' ')
+    #     # print(dict([item.split(":") for item in elem.split(",")]))
+    #     final[i] = elem
+    #     # decoded = decoded.replace(f'{str(i)}%5B','')
+    #     # decoded = decoded.replace('%5D', ':')
+    #     # decoded = decoded.replace('%C3%B3', 'ó')
+    #     # decoded = decoded.replace('+', ' ')
+    # print(final)
     return {'hello': 'world'}
 
 
