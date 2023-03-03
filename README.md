@@ -72,3 +72,6 @@ El tiempo a medir considera todo el procesamiento de datos, el tiempo que se dem
 
 Las dos últimas columnas son una sugerencia para poner en el programa de forma que se tenga un "colchón para los resultados". Tal como se puede ver en la tabla, hay algunas cantidades de cursos que a pesar de ser menor (en número) tardan más, por lo que para asegurarse de no tener al usuario esperando se recomienda ser conservadores con la estimación de tiempo. Mayor cantidad de pruebas podrán acercar esta cota a un valor real, pero los valores que se presentan en la tabla no debieran estar muy alejados de las cotas reales.
 
+## Conexión Aplicación-API
+
+La aplicación no se encuentra conectada con la API, pero en el archivo `funciones_programa.py` se presentan funciones que probablemente serán de utilidad al momento de procesar el JSON enviado por la aplicación. Lo importante es que el archivo JSON final (el cual se puede generar dentro de la API) tenga el mismo formato que los archivos .json que se encuentran dentro de la carpeta `data` (en especial el archivo `parametros7.json`, dado que es la última versión). 
